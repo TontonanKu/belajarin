@@ -1,0 +1,2280 @@
+[
+  {
+    "id": 1,
+    "category": "GEOGRAFI",
+    "question": "Apa nama ibu kota negara Australia?",
+    "answers": [
+      "canberra"
+    ],
+    "displayAnswer": "Canberra",
+    "hint": "Bukan Sydney ataupun Melbourne!",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 2,
+    "category": "SEJARAH",
+    "question": "Siapakah yang mengetik naskah Proklamasi Kemerdekaan Indonesia?",
+    "answers": [
+      "sayuti melik",
+      "sayuti"
+    ],
+    "displayAnswer": "Sayuti Melik",
+    "hint": "Nama depannya Sayuti...",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 3,
+    "category": "BUDAYA",
+    "question": "Rumah adat Tongkonan berasal dari suku mana di Sulawesi Selatan?",
+    "answers": [
+      "toraja",
+      "suku toraja"
+    ],
+    "displayAnswer": "Suku Toraja",
+    "hint": "Terkenal dengan upacara pemakaman Rambu Solo",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 4,
+    "category": "GEOGRAFI",
+    "question": "Apa danau vulkanik terbesar di Indonesia sekaligus di Asia Tenggara?",
+    "answers": [
+      "toba",
+      "danau toba"
+    ],
+    "displayAnswer": "Danau Toba",
+    "hint": "Terletak di Sumatera Utara dan ada Pulau Samosir di tengahnya",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 5,
+    "category": "SEJARAH",
+    "question": "Kerajaan Hindu tertua di Indonesia yang berada di Kalimantan Timur adalah Kerajaan...?",
+    "answers": [
+      "kutai",
+      "kerajaan kutai",
+      "kutai martadipura"
+    ],
+    "displayAnswer": "Kerajaan Kutai",
+    "hint": "Ditemukan prasasti Yupa bertuliskan huruf Pallawa",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 6,
+    "category": "EKONOMI & SOSIAL",
+    "question": "Siapakah tokoh pahlawan nasional yang ada di lembaran uang Rp 100.000?",
+    "answers": [
+      "soekarno hatta",
+      "soekarno dan hatta",
+      "sukarno hatta",
+      "soekarno-hatta",
+      "dwi tunggal"
+    ],
+    "displayAnswer": "Soekarno & Mohammad Hatta",
+    "hint": "Dua tokoh proklamator Indonesia",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 7,
+    "category": "BUDAYA",
+    "question": "Alat musik petik tradisional Sasando berasal dari provinsi mana?",
+    "answers": [
+      "ntt",
+      "nusa tenggara timur",
+      "rote",
+      "pulau rote"
+    ],
+    "displayAnswer": "Nusa Tenggara Timur (Pulau Rote)",
+    "hint": "Dibuat dari daun lontar yang melengkung",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 8,
+    "category": "GEOGRAFI",
+    "question": "Apa selat yang memisahkan Pulau Jawa dan Pulau Sumatera?",
+    "answers": [
+      "sunda",
+      "selat sunda"
+    ],
+    "displayAnswer": "Selat Sunda",
+    "hint": "Di selat ini terdapat Gunung Anak Krakatau",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 9,
+    "category": "SEJARAH",
+    "question": "Pada tanggal berapa peristiwa Proklamasi Kemerdekaan Indonesia dibacakan?",
+    "answers": [
+      "17 agustus 1945",
+      "17 agustus",
+      "17-08-1945"
+    ],
+    "displayAnswer": "17 Agustus 1945",
+    "hint": "Bulan Agustus tahun 1945",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 10,
+    "category": "BUDAYA",
+    "question": "Tari Saman yang diakui UNESCO berasal dari daerah mana?",
+    "answers": [
+      "aceh",
+      "gayo",
+      "suku gayo",
+      "nad"
+    ],
+    "displayAnswer": "Aceh (Suku Gayo)",
+    "hint": "Dikenal dengan julukan Serambi Mekkah",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 11,
+    "category": "GEOGRAFI",
+    "question": "Apa nama ibu kota provinsi Jawa Timur?",
+    "answers": [
+      "surabaya"
+    ],
+    "displayAnswer": "Surabaya",
+    "hint": "Dikenal sebagai Kota Pahlawan",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 12,
+    "category": "SEJARAH",
+    "question": "Patih kerajaan Majapahit yang terkenal dengan Sumpah Palapa adalah...?",
+    "answers": [
+      "gajah mada",
+      "maha patih gajah mada",
+      "gajahmada"
+    ],
+    "displayAnswer": "Gajah Mada",
+    "hint": "Bersumpah tidak akan menikmati kemewahan sebelum Nusantara bersatu",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 13,
+    "category": "EKONOMI & SOSIAL",
+    "question": "Apa nama mata uang resmi negara Jepang?",
+    "answers": [
+      "yen",
+      "jpy"
+    ],
+    "displayAnswer": "Yen (¥)",
+    "hint": "Terdiri dari 3 huruf berawalan Y",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 14,
+    "category": "BUDAYA",
+    "question": "Senjata tradisional khas Jawa Barat yang berbentuk melengkung disebut...?",
+    "answers": [
+      "kujang"
+    ],
+    "displayAnswer": "Kujang",
+    "hint": "Bentuknya menyerupai pulau Jawa dengan lubang-lubang kecil",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 15,
+    "category": "GEOGRAFI",
+    "question": "Apa gunung tertinggi di Indonesia yang puncaknya diselimuti salju abadi?",
+    "answers": [
+      "puncak jaya",
+      "jayawijaya",
+      "carstensz pyramid",
+      "gunung jayawijaya",
+      "puncak carstensz"
+    ],
+    "displayAnswer": "Puncak Jaya / Jayawijaya (Papua)",
+    "hint": "Terletak di pegunungan Papua",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 16,
+    "category": "SEJARAH",
+    "question": "Siapakah nama penjahit bendera pusaka Merah Putih pertama Indonesia?",
+    "answers": [
+      "fatmawati",
+      "ibu fatmawati"
+    ],
+    "displayAnswer": "Fatmawati",
+    "hint": "Istri dari Presiden Pertama RI, Ir. Soekarno",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 17,
+    "category": "GEOGRAFI",
+    "question": "Apa benua terkecil di dunia berdasarkan luas daratannya?",
+    "answers": [
+      "australia",
+      "benua australia"
+    ],
+    "displayAnswer": "Benua Australia",
+    "hint": "Benua yang juga merupakan nama satu negara",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 18,
+    "category": "BUDAYA",
+    "question": "Upacara pembakaran jenazah di Bali disebut upacara...?",
+    "answers": [
+      "ngaben"
+    ],
+    "displayAnswer": "Ngaben",
+    "hint": "Berawalan huruf N dan diakhiri N",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 19,
+    "category": "EKONOMI & SOSIAL",
+    "question": "Organisasi perhimpunan bangsa-bangsa di Asia Tenggara disingkat...?",
+    "answers": [
+      "asean"
+    ],
+    "displayAnswer": "ASEAN",
+    "hint": "Association of Southeast Asian Nations",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 20,
+    "category": "SEJARAH",
+    "question": "Candi Buddha terbesar di dunia yang terletak di Magelang, Jawa Tengah adalah...?",
+    "answers": [
+      "borobudur",
+      "candi borobudur"
+    ],
+    "displayAnswer": "Candi Borobudur",
+    "hint": "Dibangun oleh Wangsa Syailendra",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 21,
+    "category": "GEOGRAFI",
+    "question": "Apa nama ibu kota dari negara Thailand?",
+    "answers": [
+      "bangkok",
+      "krung thep"
+    ],
+    "displayAnswer": "Bangkok",
+    "hint": "Negara Gajah Putih",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 22,
+    "category": "BUDAYA",
+    "question": "Rumah adat Honai adalah rumah adat masyarakat di daerah...?",
+    "answers": [
+      "papua"
+    ],
+    "displayAnswer": "Papua",
+    "hint": "Bentuknya bulat beratap jerami/ilalang",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 23,
+    "category": "SEJARAH",
+    "question": "Pahlawan wanita dari Maluku yang berjuang melawan VOC Belanda bernama...?",
+    "answers": [
+      "martha christina tiahahu",
+      "christina tiahahu",
+      "martha tiahahu"
+    ],
+    "displayAnswer": "Martha Christina Tiahahu",
+    "hint": "Gugur di usia muda saat diasingkan di kapal",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 24,
+    "category": "GEOGRAFI",
+    "question": "Kota apa di Jawa Barat yang dijuluki sebagai 'Kota Hujan'?",
+    "answers": [
+      "bogor",
+      "kota bogor"
+    ],
+    "displayAnswer": "Bogor",
+    "hint": "Terkenal dengan Kebun Raya dan Istana Presiden",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 25,
+    "category": "EKONOMI & SOSIAL",
+    "question": "Siapakah Bapak Koperasi Indonesia?",
+    "answers": [
+      "mohammad hatta",
+      "moh hatta",
+      "bung hatta",
+      "hatta"
+    ],
+    "displayAnswer": "Mohammad Hatta",
+    "hint": "Wakil Presiden RI pertama",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 26,
+    "category": "BUDAYA",
+    "question": "Tari Kecak yang terkenal menggunakan suara 'Cak cak cak' berasal dari daerah...?",
+    "answers": [
+      "bali"
+    ],
+    "displayAnswer": "Bali",
+    "hint": "Pulau Dewata",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 27,
+    "category": "SEJARAH",
+    "question": "Perang Padri di Sumatera Barat dipimpin oleh Tuanku...?",
+    "answers": [
+      "imam bonjol",
+      "tuanku imam bonjol"
+    ],
+    "displayAnswer": "Tuanku Imam Bonjol",
+    "hint": "Wajahnya pernah diabadikan di lembaran uang Rp 5.000",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 28,
+    "category": "GEOGRAFI",
+    "question": "Sungai terpanjang di Indonesia yang berada di Kalimantan Barat adalah Sungai...?",
+    "answers": [
+      "kapuas",
+      "sungai kapuas"
+    ],
+    "displayAnswer": "Sungai Kapuas",
+    "hint": "Panjangnya mencapai sekitar 1.143 kilometer",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 29,
+    "category": "SEJARAH",
+    "question": "Hari Pahlawan di Indonesia diperingati setiap tanggal berapa?",
+    "answers": [
+      "10 november",
+      "10 nopember",
+      "10-11"
+    ],
+    "displayAnswer": "10 November",
+    "hint": "Mengenang pertempuran heroik di Surabaya tahun 1945",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 30,
+    "category": "BUDAYA",
+    "question": "Alat musik tradisional yang terbuat dari bambu dan digoyangkan bernama...?",
+    "answers": [
+      "angklung"
+    ],
+    "displayAnswer": "Angklung",
+    "hint": "Warisan budaya tak benda UNESCO dari Jawa Barat",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 31,
+    "category": "GEOGRAFI",
+    "question": "Apa nama ibu kota negara Belanda?",
+    "answers": [
+      "amsterdam"
+    ],
+    "displayAnswer": "Amsterdam",
+    "hint": "Bukan Den Haag ya!",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 32,
+    "category": "EKONOMI & SOSIAL",
+    "question": "Bank sentral milik Republik Indonesia adalah Bank...?",
+    "answers": [
+      "indonesia",
+      "bank indonesia",
+      "bi"
+    ],
+    "displayAnswer": "Bank Indonesia (BI)",
+    "hint": "Bertugas mengatur kestabilan nilai rupiah",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 33,
+    "category": "SEJARAH",
+    "question": "Semboyan bangsa Indonesia 'Bhinneka Tunggal Ika' diambil dari kitab karya Empu Tantular, yaitu Kitab...?",
+    "answers": [
+      "sutasoma",
+      "kitab sutasoma"
+    ],
+    "displayAnswer": "Kitab Sutasoma",
+    "hint": "Ditulis pada masa kejayaan Kerajaan Majapahit",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 34,
+    "category": "GEOGRAFI",
+    "question": "Garis khayal yang membagi bumi menjadi belahan bumi utara dan selatan disebut garis...?",
+    "answers": [
+      "khatulistiwa",
+      "ekuator"
+    ],
+    "displayAnswer": "Khatulistiwa / Ekuator",
+    "hint": "Melintasi Kota Pontianak",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 35,
+    "category": "BUDAYA",
+    "question": "Rumah Gadang dengan atap melengkung menyerupai tanduk kerbau berasal dari suku...?",
+    "answers": [
+      "minangkabau",
+      "minang",
+      "padang"
+    ],
+    "displayAnswer": "Suku Minangkabau (Sumatera Barat)",
+    "hint": "Ibu kota provinsinya Padang",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 36,
+    "category": "SEJARAH",
+    "question": "Siapakah pencipta lagu kebangsaan Indonesia Raya?",
+    "answers": [
+      "wage rudolf soepratman",
+      "wr soepratman",
+      "w r soepratman",
+      "wr supratman"
+    ],
+    "displayAnswer": "W.R. Soepratman",
+    "hint": "Lagu pertama kali diperdengarkan saat Kongres Pemuda II 1928",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 37,
+    "category": "GEOGRAFI",
+    "question": "Negara apa yang memiliki julukan 'Negeri Matahari Terbit'?",
+    "answers": [
+      "jepang",
+      "japan"
+    ],
+    "displayAnswer": "Jepang",
+    "hint": "Ibu kotanya Tokyo",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 38,
+    "category": "EKONOMI & SOSIAL",
+    "question": "Kegiatan menjual barang atau jasa dari dalam negeri ke luar negeri disebut...?",
+    "answers": [
+      "ekspor"
+    ],
+    "displayAnswer": "Ekspor",
+    "hint": "Lawan kata dari impor",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 39,
+    "category": "BUDAYA",
+    "question": "Kain tenun ikat tradisional 'Ulos' berasal dari daerah suku apa di Sumatera Utara?",
+    "answers": [
+      "batak",
+      "suku batak"
+    ],
+    "displayAnswer": "Suku Batak",
+    "hint": "Sering disematkan di bahu pada upacara adat Batak",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 40,
+    "category": "SEJARAH",
+    "question": "Tokoh pahlawan nasional dari Jawa Tengah yang terkenal dengan perang gerilya dan memimpin perang dari atas tandu adalah Jenderal...?",
+    "answers": [
+      "soedirman",
+      "sudirman",
+      "jenderal soedirman"
+    ],
+    "displayAnswer": "Jenderal Soedirman",
+    "hint": "Panglima Besar TNI pertama",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 41,
+    "category": "GEOGRAFI",
+    "question": "Apa nama ibu kota negara Malaysia?",
+    "answers": [
+      "kuala lumpur"
+    ],
+    "displayAnswer": "Kuala Lumpur",
+    "hint": "Terdapat menara kembar Petronas",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 42,
+    "category": "BUDAYA",
+    "question": "Senjata tradisional khas Aceh yang memiliki ujung melengkung runcing adalah...?",
+    "answers": [
+      "rencong"
+    ],
+    "displayAnswer": "Rencong",
+    "hint": "Aceh juga dijuluki 'Tanah Rencong'",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 43,
+    "category": "SEJARAH",
+    "question": "Kongres Pemuda II yang melahirkan ikrar Sumpah Pemuda diadakan pada tanggal berapa?",
+    "answers": [
+      "28 oktober 1928",
+      "28 oktober",
+      "28-10-1928"
+    ],
+    "displayAnswer": "28 Oktober 1928",
+    "hint": "Bulan Oktober tahun 1928",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 44,
+    "category": "GEOGRAFI",
+    "question": "Gurun pasir terluas di dunia yang berada di benua Afrika adalah Gurun...?",
+    "answers": [
+      "sahara",
+      "gurun sahara"
+    ],
+    "displayAnswer": "Gurun Sahara",
+    "hint": "Membentang di bagian utara benua Afrika",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 45,
+    "category": "EKONOMI & SOSIAL",
+    "question": "Pajak Pertambahan Nilai biasa disingkat dengan...?",
+    "answers": [
+      "ppn"
+    ],
+    "displayAnswer": "PPN",
+    "hint": "Terdiri dari 3 huruf P-P-N",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 46,
+    "category": "BUDAYA",
+    "question": "Tari Piring adalah tarian tradisional yang berasal dari provinsi...?",
+    "answers": [
+      "sumatera barat",
+      "sumbar",
+      "padang"
+    ],
+    "displayAnswer": "Sumatera Barat",
+    "hint": "Penarinya memegang piring di kedua telapak tangan",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 47,
+    "category": "SEJARAH",
+    "question": "Raja terbesar dari Kerajaan Singasari yang menolak tunduk pada Kaisar Mongol Kubilai Khan adalah Raja...?",
+    "answers": [
+      "kertanegara",
+      "kertanegara"
+    ],
+    "displayAnswer": "Kertanegara",
+    "hint": "Raja terakhir yang melakukan Ekspedisi Pamalayu",
+    "difficulty": "Sulit",
+    "points": 20,
+    "subject": "IPS"
+  },
+  {
+    "id": 48,
+    "category": "GEOGRAFI",
+    "question": "Pulau manakah di Indonesia yang terbagi menjadi tiga negara (Indonesia, Malaysia, Brunei)?",
+    "answers": [
+      "kalimantan",
+      "borneo",
+      "pulau kalimantan"
+    ],
+    "displayAnswer": "Kalimantan (Borneo)",
+    "hint": "Pulau terbesar ketiga di dunia",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 49,
+    "category": "BUDAYA",
+    "question": "Tradisi lompat batu (Hombo Batu) adalah tradisi pemuda di pulau mana?",
+    "answers": [
+      "nias",
+      "pulau nias"
+    ],
+    "displayAnswer": "Pulau Nias",
+    "hint": "Pulau di sebelah barat Sumatera Utara",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 50,
+    "category": "SEJARAH",
+    "question": "Perjanjian Linggarjati antara Indonesia dan Belanda diadakan di kota mana di Jawa Barat?",
+    "answers": [
+      "kuningan",
+      "cirebon"
+    ],
+    "displayAnswer": "Kuningan (Linggarjati)",
+    "hint": "Berada di kaki Gunung Ciremai",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 51,
+    "category": "GEOGRAFI",
+    "question": "Apa nama ibu kota negara Filipina?",
+    "answers": [
+      "manila"
+    ],
+    "displayAnswer": "Manila",
+    "hint": "Berawalan huruf M",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 52,
+    "category": "EKONOMI & SOSIAL",
+    "question": "Pasar yang hanya memiliki satu orang penjual dan banyak pembeli disebut pasar...?",
+    "answers": [
+      "monopoli"
+    ],
+    "displayAnswer": "Monopoli",
+    "hint": "Lawan dari monopsoni",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 53,
+    "category": "SEJARAH",
+    "question": "Siapakah pendiri Kerajaan Majapahit yang bergelar Kertarajasa Jayawardhana?",
+    "answers": [
+      "raden wijaya",
+      "wijaya"
+    ],
+    "displayAnswer": "Raden Wijaya",
+    "hint": "Menantu Raja Kertanegara Singasari",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 54,
+    "category": "BUDAYA",
+    "question": "Reog adalah kesenian tradisional terkenal yang berasal dari kabupaten...?",
+    "answers": [
+      "ponorogo"
+    ],
+    "displayAnswer": "Ponorogo (Jawa Timur)",
+    "hint": "Topeng singa berkepala bulu merak seberat puluhan kilogram",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 55,
+    "category": "GEOGRAFI",
+    "question": "Pegunungan Himalaya dengan puncak Everest terletak di benua mana?",
+    "answers": [
+      "asia",
+      "benua asia"
+    ],
+    "displayAnswer": "Benua Asia",
+    "hint": "Benua terluas di dunia",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 56,
+    "category": "SEJARAH",
+    "question": "Organisasi pergerakan nasional pertama di Indonesia yang didirikan 20 Mei 1908 adalah...?",
+    "answers": [
+      "budi utomo",
+      "boedi oetomo"
+    ],
+    "displayAnswer": "Budi Utomo",
+    "hint": "Didirikan oleh Dr. Soetomo dan para pelajar STOVIA",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 57,
+    "category": "GEOGRAFI",
+    "question": "Apa nama ibu kota provinsi Papua Barat Daya?",
+    "answers": [
+      "sorong",
+      "kota sorong"
+    ],
+    "displayAnswer": "Sorong",
+    "hint": "Pintu gerbang menuju Raja Ampat",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 58,
+    "category": "BUDAYA",
+    "question": "Wayang kulit dari Jawa diiringi oleh seperangkat alat musik tradisional bernama...?",
+    "answers": [
+      "gamelan"
+    ],
+    "displayAnswer": "Gamelan",
+    "hint": "Terdiri dari gong, saron, bonang, dan kendang",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 59,
+    "category": "EKONOMI & SOSIAL",
+    "question": "Apa nama mata uang resmi negara Korea Selatan?",
+    "answers": [
+      "won",
+      "krw"
+    ],
+    "displayAnswer": "Won (₩)",
+    "hint": "Berawalan huruf W, 3 huruf",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 60,
+    "category": "SEJARAH",
+    "question": "Pahlawan dari Papua yang wajahnya diabadikan di uang pecahan Rp 10.000 adalah Frans...?",
+    "answers": [
+      "kaisiepo",
+      "frans kaisiepo"
+    ],
+    "displayAnswer": "Frans Kaisiepo",
+    "hint": "Nama belakangnya Kaisiepo",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 61,
+    "category": "GEOGRAFI",
+    "question": "Apa samudra terluas di dunia?",
+    "answers": [
+      "pasifik",
+      "samudra pasifik",
+      "lautan pasifik"
+    ],
+    "displayAnswer": "Samudra Pasifik",
+    "hint": "Menutupi lebih dari sepertiga luas permukaan bumi",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 62,
+    "category": "BUDAYA",
+    "question": "Senjata tradisional khas suku Dayak di Kalimantan adalah...?",
+    "answers": [
+      "mandau"
+    ],
+    "displayAnswer": "Mandau",
+    "hint": "Pedang tradisional dengan ukiran dan hiasan rambut/taring",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 63,
+    "category": "SEJARAH",
+    "question": "Peristiwa penculikan Soekarno dan Hatta sebelum proklamasi dikenal dengan peristiwa...?",
+    "answers": [
+      "rengasdengklok",
+      "rengas dengklok"
+    ],
+    "displayAnswer": "Rengasdengklok",
+    "hint": "Daerah di Karawang, Jawa Barat",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 64,
+    "category": "GEOGRAFI",
+    "question": "Apa nama ibu kota negara Jerman?",
+    "answers": [
+      "berlin"
+    ],
+    "displayAnswer": "Berlin",
+    "hint": "Pernah terbagi oleh tembok pembatas terkenal",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 65,
+    "category": "EKONOMI & SOSIAL",
+    "question": "Kenaikan harga barang dan jasa secara umum dan terus menerus dalam jangka waktu tertentu disebut...?",
+    "answers": [
+      "inflasi"
+    ],
+    "displayAnswer": "Inflasi",
+    "hint": "Lawan katanya adalah deflasi",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 66,
+    "category": "BUDAYA",
+    "question": "Tari Jaipong adalah seni tari tradisional yang berasal dari provinsi...?",
+    "answers": [
+      "jawa barat",
+      "jabar",
+      "sunda"
+    ],
+    "displayAnswer": "Jawa Barat",
+    "hint": "Diciptakan oleh seniman Gugum Gumbira",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 67,
+    "category": "SEJARAH",
+    "question": "Siapakah nama ratu Inggris yang memimpin selama 70 tahun hingga wafat pada tahun 2022?",
+    "answers": [
+      "elizabeth ii",
+      "elizabeth 2",
+      "ratu elizabeth",
+      "queen elizabeth"
+    ],
+    "displayAnswer": "Ratu Elizabeth II",
+    "hint": "Ibu dari Raja Charles III",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 68,
+    "category": "GEOGRAFI",
+    "question": "Apa nama ibu kota negara Italia?",
+    "answers": [
+      "roma",
+      "rome"
+    ],
+    "displayAnswer": "Roma",
+    "hint": "Terdapat Colosseum dan Kota Vatikan",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 69,
+    "category": "SEJARAH",
+    "question": "Kerajaan Maritim Buddha terbesar di Nusantara yang berpusat di Palembang adalah Kerajaan...?",
+    "answers": [
+      "sriwijaya",
+      "kerajaan sriwijaya"
+    ],
+    "displayAnswer": "Kerajaan Sriwijaya",
+    "hint": "Menguasai jalur perdagangan Selat Malaka",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 70,
+    "category": "BUDAYA",
+    "question": "Rumah adat Joglo adalah rumah adat khas masyarakat suku...?",
+    "answers": [
+      "jawa",
+      "suku jawa"
+    ],
+    "displayAnswer": "Suku Jawa",
+    "hint": "Memiliki tiang utama yang disebut soko guru",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 71,
+    "category": "GEOGRAFI",
+    "question": "Negara apa yang memiliki Menara Eiffel?",
+    "answers": [
+      "prancis",
+      "perancis",
+      "france"
+    ],
+    "displayAnswer": "Prancis",
+    "hint": "Ibu kotanya Paris",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 72,
+    "category": "EKONOMI & SOSIAL",
+    "question": "BUMN di Indonesia yang mengelola minyak dan gas bumi adalah PT...?",
+    "answers": [
+      "pertamina"
+    ],
+    "displayAnswer": "PT Pertamina",
+    "hint": "Logo warna merah, biru, dan hijau",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 73,
+    "category": "SEJARAH",
+    "question": "Hari Pendidikan Nasional (Hardiknas) diperingati setiap tanggal...?",
+    "answers": [
+      "2 mei",
+      "02 mei",
+      "2-5"
+    ],
+    "displayAnswer": "2 Mei",
+    "hint": "Tanggal kelahiran Ki Hajar Dewantara",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 74,
+    "category": "GEOGRAFI",
+    "question": "Apa nama ibu kota negara Arab Saudi?",
+    "answers": [
+      "riyadh",
+      "riyad"
+    ],
+    "displayAnswer": "Riyadh",
+    "hint": "Bukan Mekkah ataupun Madinah",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 75,
+    "category": "BUDAYA",
+    "question": "Tari Pendet yang awalnya merupakan tarian pemujaan di pura berasal dari...?",
+    "answers": [
+      "bali"
+    ],
+    "displayAnswer": "Bali",
+    "hint": "Para penari membawa cawan bunga",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 76,
+    "category": "SEJARAH",
+    "question": "Siapakah nama laksamana wanita pertama dari Kesultanan Aceh yang memimpin pasukan Inong Balee?",
+    "answers": [
+      "malahayati",
+      "keumalahayati",
+      "laksamana malahayati"
+    ],
+    "displayAnswer": "Keumalahayati (Laksamana Malahayati)",
+    "hint": "Berhasil menewaskan Cornelis de Houtman dalam duel satu lawan satu",
+    "difficulty": "Sulit",
+    "points": 20,
+    "subject": "IPS"
+  },
+  {
+    "id": 77,
+    "category": "GEOGRAFI",
+    "question": "Sungai terpanjang di dunia yang mengalir di benua Afrika adalah Sungai...?",
+    "answers": [
+      "nil",
+      "sungai nil"
+    ],
+    "displayAnswer": "Sungai Nil",
+    "hint": "Melintasi negara Mesir",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 78,
+    "category": "EKONOMI & SOSIAL",
+    "question": "Siapakah pencetus semboyan 'Tut Wuri Handayani'?",
+    "answers": [
+      "ki hajar dewantara",
+      "ki hadjar dewantara",
+      "soewardi soerjaningrat"
+    ],
+    "displayAnswer": "Ki Hajar Dewantara",
+    "hint": "Pendiri Perguruan Taman Siswa",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 79,
+    "category": "BUDAYA",
+    "question": "Alat musik petik tradisional khas suku Dayak yang terbuat dari kayu ulin disebut...?",
+    "answers": [
+      "sape",
+      "sampe",
+      "sape'"
+    ],
+    "displayAnswer": "Sape / Sampe",
+    "hint": "Berawalan huruf S dan memiliki dawai petik",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 80,
+    "category": "GEOGRAFI",
+    "question": "Apa nama ibu kota negara Mesir?",
+    "answers": [
+      "kairo",
+      "cairo"
+    ],
+    "displayAnswer": "Kairo",
+    "hint": "Terdapat Piramida Giza di dekatnya",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 81,
+    "category": "GEOGRAFI",
+    "question": "Apa ibu kota negara Turki?",
+    "answers": [
+      "ankara"
+    ],
+    "displayAnswer": "Ankara",
+    "hint": "Bukan Istanbul ya!",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 82,
+    "category": "SEJARAH",
+    "question": "Siapakah tokoh yang membakar semangat arek-arek Surabaya melalui pidato radio pada 10 November 1945?",
+    "answers": [
+      "bung tomo",
+      "sutomo"
+    ],
+    "displayAnswer": "Bung Tomo (Sutomo)",
+    "hint": "Terkenal dengan takbirnya yang membahana di radio",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 83,
+    "category": "BUDAYA",
+    "question": "Tradisi balapan sapi yang terkenal berasal dari pulau apa di Jawa Timur?",
+    "answers": [
+      "madura",
+      "pulau madura"
+    ],
+    "displayAnswer": "Pulau Madura (Karapan Sapi)",
+    "hint": "Dikenal dengan sebutan Karapan Sapi",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 84,
+    "category": "GEOGRAFI",
+    "question": "Apa nama ibu kota negara Brasil?",
+    "answers": [
+      "brasilia"
+    ],
+    "displayAnswer": "Brasilia",
+    "hint": "Bukan Rio de Janeiro ataupun Sao Paulo!",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 85,
+    "category": "SEJARAH",
+    "question": "Kerajaan Islam pertama di kepulauan Indonesia adalah Kerajaan...?",
+    "answers": [
+      "samudera pasai",
+      "pasai",
+      "samudra pasai"
+    ],
+    "displayAnswer": "Kerajaan Samudera Pasai (Aceh)",
+    "hint": "Didirikan oleh Marah Silu (Sultan Malik As-Saleh)",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 86,
+    "category": "BUDAYA",
+    "question": "Alat musik perkusi khas Minahasa, Sulawesi Utara yang terbuat dari kayu disebut...?",
+    "answers": [
+      "kolintang",
+      "kulintang"
+    ],
+    "displayAnswer": "Kolintang",
+    "hint": "Dimainkan dengan cara dipukul bilah-bilah kayunya",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 87,
+    "category": "GEOGRAFI",
+    "question": "Kota di Indonesia yang tepat dilewati oleh garis khatulistiwa adalah Kota...?",
+    "answers": [
+      "pontianak",
+      "kota pontianak"
+    ],
+    "displayAnswer": "Pontianak (Kalimantan Barat)",
+    "hint": "Terdapat Tugu Khatulistiwa di kota ini",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 88,
+    "category": "SEJARAH",
+    "question": "Raja terbesar Kerajaan Majapahit yang didampingi oleh Patih Gajah Mada adalah Raja...?",
+    "answers": [
+      "hayam wuruk"
+    ],
+    "displayAnswer": "Hayam Wuruk (Rajasanagara)",
+    "hint": "Memerintah pada masa keemasan abad ke-14",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 89,
+    "category": "EKONOMI & SOSIAL",
+    "question": "Pancasila dirumuskan dan pertama kali dicetuskan dalam sidang badan apa pada Juni 1945?",
+    "answers": [
+      "bpupki",
+      "bpupk"
+    ],
+    "displayAnswer": "BPUPKI (Dokuritsu Junbi Cosakai)",
+    "hint": "Badan Penyelidik Usaha-usaha Persiapan Kemerdekaan Indonesia",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 90,
+    "category": "GEOGRAFI",
+    "question": "Apa nama ibu kota negara Spanyol?",
+    "answers": [
+      "madrid"
+    ],
+    "displayAnswer": "Madrid",
+    "hint": "Kota klub sepak bola Real Madrid",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 91,
+    "category": "BUDAYA",
+    "question": "Tari Tor-tor adalah seni tari perayaan adat yang berasal dari suku...?",
+    "answers": [
+      "batak",
+      "suku batak",
+      "batak toba"
+    ],
+    "displayAnswer": "Suku Batak (Sumatera Utara)",
+    "hint": "Ditarikan dengan iringan musik gondang sabangunan",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 92,
+    "category": "SEJARAH",
+    "question": "Pahlawan nasional yang dijuluki Ayam Jantan dari Timur adalah Sultan...?",
+    "answers": [
+      "hasanuddin",
+      "hasanudin",
+      "sultan hasanuddin"
+    ],
+    "displayAnswer": "Sultan Hasanuddin",
+    "hint": "Raja dari Kesultanan Gowa di Makassar",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 93,
+    "category": "GEOGRAFI",
+    "question": "Apa nama ibu kota negara Kanada?",
+    "answers": [
+      "ottawa"
+    ],
+    "displayAnswer": "Ottawa",
+    "hint": "Bukan Toronto ataupun Vancouver!",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 94,
+    "category": "BUDAYA",
+    "question": "Upacara adat Yadnya Kasada melempar sesaji ke kawah gunung berapi dilakukan suku Tengger di Gunung...?",
+    "answers": [
+      "bromo",
+      "gunung bromo"
+    ],
+    "displayAnswer": "Gunung Bromo (Jawa Timur)",
+    "hint": "Kisah pengorbanan Roro Anteng dan Joko Seger",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 95,
+    "category": "SEJARAH",
+    "question": "Perang Diponegoro (Perang Jawa) melawan kolonial Hindia Belanda berlangsung selama kurun tahun...?",
+    "answers": [
+      "1825-1830",
+      "1825 1830",
+      "1825 sampai 1830",
+      "5 tahun"
+    ],
+    "displayAnswer": "1825 - 1830 (5 Tahun)",
+    "hint": "Berlangsung selama 5 tahun di awal abad ke-19",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 96,
+    "category": "GEOGRAFI",
+    "question": "Apa nama ibu kota negara Korea Selatan?",
+    "answers": [
+      "seoul",
+      "seul"
+    ],
+    "displayAnswer": "Seoul",
+    "hint": "Pusat industri K-Pop dan drama Korea",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 97,
+    "category": "EKONOMI & SOSIAL",
+    "question": "Hari Lahir Pancasila diperingati setiap tanggal berapa?",
+    "answers": [
+      "1 juni",
+      "01 juni",
+      "1-6"
+    ],
+    "displayAnswer": "1 Juni",
+    "hint": "Pidato Soekarno tentang dasar negara tahun 1945",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 98,
+    "category": "GEOGRAFI",
+    "question": "Apa nama ibu kota negara Selandia Baru (New Zealand)?",
+    "answers": [
+      "wellington"
+    ],
+    "displayAnswer": "Wellington",
+    "hint": "Bukan Auckland ya!",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 99,
+    "category": "BUDAYA",
+    "question": "Tari Barong adalah pertunjukan tarian tradisional mitologi yang sangat populer di pulau...?",
+    "answers": [
+      "bali",
+      "pulau bali"
+    ],
+    "displayAnswer": "Bali",
+    "hint": "Menggambarkan pertarungan abadi kebaikan melawan kejahatan (Rangda)",
+    "difficulty": "Mudah",
+    "points": 10,
+    "subject": "IPS"
+  },
+  {
+    "id": 100,
+    "category": "SEJARAH",
+    "question": "Prasasti Ciaruteun yang menampilkan jejak telapak kaki Raja Purnawarman merupakan peninggalan Kerajaan...?",
+    "answers": [
+      "tarumanegara",
+      "taruma negara"
+    ],
+    "displayAnswer": "Kerajaan Tarumanegara (Jawa Barat)",
+    "hint": "Kerajaan Hindu kuno di wilayah lembah Sungai Citarum",
+    "difficulty": "Sedang",
+    "points": 15,
+    "subject": "IPS"
+  },
+  {
+    "id": 101,
+    "subject": "IPA",
+    "category": "BIOLOGI",
+    "question": "Organel sel yang berfungsi sebagai pembangkit energi sel (powerhouse of cell) adalah...?",
+    "answers": [
+      "mitokondria"
+    ],
+    "displayAnswer": "Mitokondria",
+    "hint": "Tempat respirasi seluler penghasil ATP",
+    "difficulty": "Sedang",
+    "points": 15
+  },
+  {
+    "id": 102,
+    "subject": "IPA",
+    "category": "SAINS",
+    "question": "Proses pembuatan makanan pada tumbuhan hijau dengan bantuan sinar matahari disebut...?",
+    "answers": [
+      "fotosintesis"
+    ],
+    "displayAnswer": "Fotosintesis",
+    "hint": "Menghasilkan oksigen dan glukosa",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 103,
+    "subject": "IPA",
+    "category": "BIOLOGI",
+    "question": "Zat hijau daun pada tumbuhan yang menyerap cahaya matahari disebut...?",
+    "answers": [
+      "klorofil"
+    ],
+    "displayAnswer": "Klorofil",
+    "hint": "Berawalan huruf K dan berakhiran L",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 104,
+    "subject": "IPA",
+    "category": "ASTRONOMI",
+    "question": "Planet terdekat dari Matahari dalam sistem tata surya kita adalah Planet...?",
+    "answers": [
+      "merkurius"
+    ],
+    "displayAnswer": "Merkurius",
+    "hint": "Planet terkecil dan paling dekat dengan matahari",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 105,
+    "subject": "IPA",
+    "category": "SAINS",
+    "question": "Gas apakah yang paling banyak terkandung di atmosfer Bumi (mencapai sekitar 78%)?",
+    "answers": [
+      "nitrogen",
+      "n2"
+    ],
+    "displayAnswer": "Nitrogen (N2)",
+    "hint": "Bukan oksigen ya!",
+    "difficulty": "Sedang",
+    "points": 15
+  },
+  {
+    "id": 106,
+    "subject": "IPA",
+    "category": "BIOLOGI",
+    "question": "Hewan yang hidup di dua alam (air dan darat) seperti katak disebut hewan...?",
+    "answers": [
+      "amfibi",
+      "amphibi"
+    ],
+    "displayAnswer": "Amfibi",
+    "hint": "Contohnya katak dan salamander",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 107,
+    "subject": "IPA",
+    "category": "ANATOMI",
+    "question": "Organ tubuh manusia yang bertugas memompa darah ke seluruh tubuh adalah...?",
+    "answers": [
+      "jantung"
+    ],
+    "displayAnswer": "Jantung",
+    "hint": "Berdetak sekitar 60-100 kali per menit",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 108,
+    "subject": "IPA",
+    "category": "ASTRONOMI",
+    "question": "Planet terbesar di tata surya kita adalah Planet...?",
+    "answers": [
+      "jupiter",
+      "yupiter"
+    ],
+    "displayAnswer": "Jupiter",
+    "hint": "Planet gas raksasa dengan Bintik Merah Raksasa",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 109,
+    "subject": "IPA",
+    "category": "BIOLOGI",
+    "question": "Hewan pemakan tumbuhan disebut hewan...?",
+    "answers": [
+      "herbivora",
+      "herbivor"
+    ],
+    "displayAnswer": "Herbivora",
+    "hint": "Contohnya sapi, kambing, dan kelinci",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 110,
+    "subject": "IPA",
+    "category": "SAINS",
+    "question": "Lapisan gas di atmosfer yang melindungi bumi dari radiasi ultraviolet berbahaya adalah lapisan...?",
+    "answers": [
+      "ozon"
+    ],
+    "displayAnswer": "Lapisan Ozon (O3)",
+    "hint": "Terdiri dari molekul O3",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 111,
+    "subject": "IPA",
+    "category": "BIOLOGI",
+    "question": "Hewan yang berkembang biak dengan cara bertelur disebut hewan...?",
+    "answers": [
+      "ovipar"
+    ],
+    "displayAnswer": "Ovipar",
+    "hint": "Lawan dari vivipar",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 112,
+    "subject": "IPA",
+    "category": "BIOLOGI",
+    "question": "Simbiosis saling menguntungkan antara dua makhluk hidup disebut simbiosis...?",
+    "answers": [
+      "mutualisme"
+    ],
+    "displayAnswer": "Mutualisme",
+    "hint": "Contoh lebah madu dengan bunga",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 113,
+    "subject": "IPA",
+    "category": "ANATOMI",
+    "question": "Golongan darah manusia yang disebut sebagai resipien universal adalah golongan darah...?",
+    "answers": [
+      "ab",
+      "golongan ab"
+    ],
+    "displayAnswer": "Golongan Darah AB",
+    "hint": "Dapat menerima darah dari semua golongan",
+    "difficulty": "Sedang",
+    "points": 15
+  },
+  {
+    "id": 114,
+    "subject": "IPA",
+    "category": "BIOLOGI",
+    "question": "Mamalia air terbesar yang bernapas menggunakan paru-paru adalah...?",
+    "answers": [
+      "paus",
+      "ikan paus",
+      "paus biru"
+    ],
+    "displayAnswer": "Paus (Paus Biru)",
+    "hint": "Bukan ikan melainkan mamalia",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 115,
+    "subject": "IPA",
+    "category": "SAINS",
+    "question": "Peristiwa perubahan wujud benda padat menjadi gas tanpa melalui fase cair disebut...?",
+    "answers": [
+      "menyublim",
+      "sublimasi"
+    ],
+    "displayAnswer": "Menyublim / Sublimasi",
+    "hint": "Contoh pada kapur barus yang mengecil",
+    "difficulty": "Sedang",
+    "points": 15
+  },
+  {
+    "id": 201,
+    "subject": "MTK",
+    "category": "HITUNG CEPAT",
+    "question": "Berapakah hasil dari: 15 + 25 - 12 = ?",
+    "answers": [
+      "28"
+    ],
+    "displayAnswer": "28",
+    "hint": "40 - 12 = ?",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 202,
+    "subject": "MTK",
+    "category": "HITUNG CEPAT",
+    "question": "Berapakah hasil dari perkalian: 9 x 8 = ?",
+    "answers": [
+      "72"
+    ],
+    "displayAnswer": "72",
+    "hint": "Tujuh puluh dua",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 203,
+    "subject": "MTK",
+    "category": "HITUNG CEPAT",
+    "question": "Berapakah hasil dari: 100 - 45 + 15 = ?",
+    "answers": [
+      "70"
+    ],
+    "displayAnswer": "70",
+    "hint": "55 + 15 = ?",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 204,
+    "subject": "MTK",
+    "category": "HITUNG CEPAT",
+    "question": "Berapakah akar kuadrat dari 144 (√144)?",
+    "answers": [
+      "12"
+    ],
+    "displayAnswer": "12",
+    "hint": "Perkalian angka kembar 12 x 12",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 205,
+    "subject": "MTK",
+    "category": "GEOMETRI",
+    "question": "Berapakah jumlah total besar ketiga sudut pada bangun segitiga? (dalam derajat)",
+    "answers": [
+      "180",
+      "180 derajat"
+    ],
+    "displayAnswer": "180 Derajat",
+    "hint": "Setengah dari putaran penuh lingkaran 360",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 206,
+    "subject": "MTK",
+    "category": "HITUNG CEPAT",
+    "question": "Berapakah hasil dari: 13 - 11 - 1 = ?",
+    "answers": [
+      "1",
+      "satu"
+    ],
+    "displayAnswer": "1",
+    "hint": "2 - 1 = ?",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 207,
+    "subject": "MTK",
+    "category": "HITUNG CEPAT",
+    "question": "Berapakah hasil dari: 7 x 7 = ?",
+    "answers": [
+      "49"
+    ],
+    "displayAnswer": "49",
+    "hint": "Empat puluh sembilan",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 208,
+    "subject": "MTK",
+    "category": "HITUNG CEPAT",
+    "question": "Satu-satunya bilangan prima yang merupakan bilangan genap adalah angka...?",
+    "answers": [
+      "2",
+      "dua"
+    ],
+    "displayAnswer": "2",
+    "hint": "Bilangan prima terkecil",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 209,
+    "subject": "MTK",
+    "category": "GEOMETRI",
+    "question": "Sebuah persegi memiliki panjang sisi 6 cm. Berapakah luas persegi tersebut? (cm²)",
+    "answers": [
+      "36",
+      "36 cm"
+    ],
+    "displayAnswer": "36 cm²",
+    "hint": "Rumus: sisi x sisi (6 x 6)",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 210,
+    "subject": "MTK",
+    "category": "HITUNG CEPAT",
+    "question": "Berapakah hasil dari: 50 : 5 x 2 = ?",
+    "answers": [
+      "20"
+    ],
+    "displayAnswer": "20",
+    "hint": "10 x 2 = ?",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 211,
+    "subject": "MTK",
+    "category": "HITUNG CEPAT",
+    "question": "Berapakah hasil dari 2 pangkat 4 (2⁴)?",
+    "answers": [
+      "16"
+    ],
+    "displayAnswer": "16",
+    "hint": "2 x 2 x 2 x 2",
+    "difficulty": "Sedang",
+    "points": 15
+  },
+  {
+    "id": 212,
+    "subject": "MTK",
+    "category": "ROMAN",
+    "question": "Huruf apakah yang melambangkan angka 50 dalam angka Romawi?",
+    "answers": [
+      "l"
+    ],
+    "displayAnswer": "L",
+    "hint": "Satu huruf: L",
+    "difficulty": "Sedang",
+    "points": 15
+  },
+  {
+    "id": 213,
+    "subject": "MTK",
+    "category": "HITUNG CEPAT",
+    "question": "Berapakah hasil dari: 25 x 4 = ?",
+    "answers": [
+      "100"
+    ],
+    "displayAnswer": "100",
+    "hint": "Tepat seratus",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 214,
+    "subject": "MTK",
+    "category": "HITUNG CEPAT",
+    "question": "Berapakah hasil dari: 84 : 7 = ?",
+    "answers": [
+      "12"
+    ],
+    "displayAnswer": "12",
+    "hint": "Hasilnya dua belas",
+    "difficulty": "Sedang",
+    "points": 15
+  },
+  {
+    "id": 215,
+    "subject": "MTK",
+    "category": "HITUNG CEPAT",
+    "question": "Berapakah hasil dari: 15 x 15 = ?",
+    "answers": [
+      "225"
+    ],
+    "displayAnswer": "225",
+    "hint": "Dua ratus dua puluh lima",
+    "difficulty": "Sedang",
+    "points": 15
+  },
+  {
+    "id": 301,
+    "subject": "BAHASA INDONESIA",
+    "category": "PERIBAHASA",
+    "question": "Lengkapi peribahasa berikut: \"Air beriak tanda tak...?\"",
+    "answers": [
+      "dalam"
+    ],
+    "displayAnswer": "Dalam",
+    "hint": "Orang yang banyak bicara biasanya kurang ilmunya",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 302,
+    "subject": "BAHASA INDONESIA",
+    "category": "PERIBAHASA",
+    "question": "Lengkapi peribahasa berikut: \"Besar pasak daripada...?\"",
+    "answers": [
+      "tiang"
+    ],
+    "displayAnswer": "Tiang",
+    "hint": "Pengeluaran lebih besar daripada pendapatan",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 303,
+    "subject": "BAHASA INDONESIA",
+    "category": "ANTONIM",
+    "question": "Apakah lawan kata (antonim) dari kata \"OPTIMIS\"?",
+    "answers": [
+      "pesimis",
+      "pesimistis"
+    ],
+    "displayAnswer": "Pesimis",
+    "hint": "Selalu berpandangan ragu atau putus asa",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 304,
+    "subject": "BAHASA INDONESIA",
+    "category": "SASTRA",
+    "question": "Majas yang membandingkan benda mati seolah-olah bernyawa dan berperilaku seperti manusia adalah majas...?",
+    "answers": [
+      "personifikasi"
+    ],
+    "displayAnswer": "Personifikasi",
+    "hint": "Contoh: Nyiur melambai-lambai di tepi pantai",
+    "difficulty": "Sedang",
+    "points": 15
+  },
+  {
+    "id": 305,
+    "subject": "BAHASA INDONESIA",
+    "category": "PERIBAHASA",
+    "question": "Lengkapi peribahasa: \"Tong kosong nyaring...?\"",
+    "answers": [
+      "bunyinya"
+    ],
+    "displayAnswer": "Bunyinya",
+    "hint": "Orang yang bodoh banyak omongnya",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 306,
+    "subject": "BAHASA INDONESIA",
+    "category": "SASTRA",
+    "question": "Cerita khayalan yang tokoh-tokohnya diperankan oleh binatang yang dapat berbicara disebut cerita...?",
+    "answers": [
+      "fabel"
+    ],
+    "displayAnswer": "Fabel",
+    "hint": "Contoh kisah Kancil dan Buaya",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 307,
+    "subject": "BAHASA INDONESIA",
+    "category": "SINONIM",
+    "question": "Apakah persamaan kata (sinonim) dari kata \"KOLABORASI\"?",
+    "answers": [
+      "kerjasama",
+      "kerja sama"
+    ],
+    "displayAnswer": "Kerja Sama",
+    "hint": "Melakukan sesuatu bersama-sama",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 308,
+    "subject": "BAHASA INDONESIA",
+    "category": "PERIBAHASA",
+    "question": "Lengkapi peribahasa: \"Ada udang di balik...?\"",
+    "answers": [
+      "batu"
+    ],
+    "displayAnswer": "Batu",
+    "hint": "Ada maksud tersembunyi",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 309,
+    "subject": "BAHASA INDONESIA",
+    "category": "ANTONIM",
+    "question": "Apakah lawan kata (antonim) dari tokoh \"PROTAGONIS\" dalam cerita?",
+    "answers": [
+      "antagonis"
+    ],
+    "displayAnswer": "Antagonis",
+    "hint": "Tokoh penentang atau berwatak jahat",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 310,
+    "subject": "BAHASA INDONESIA",
+    "category": "SASTRA",
+    "question": "Puisi lama Melayu yang tiap baitnya terdiri dari 4 baris berima a-b-a-b disebut...?",
+    "answers": [
+      "pantun"
+    ],
+    "displayAnswer": "Pantun",
+    "hint": "Ada sampiran dan isi",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 311,
+    "subject": "BAHASA INDONESIA",
+    "category": "SASTRA",
+    "question": "Siapakah pengarang novel sastra terkenal \"Laskar Pelangi\"?",
+    "answers": [
+      "andrea hirata",
+      "hirata"
+    ],
+    "displayAnswer": "Andrea Hirata",
+    "hint": "Kisah anak-anak di Belitung",
+    "difficulty": "Sedang",
+    "points": 15
+  },
+  {
+    "id": 312,
+    "subject": "BAHASA INDONESIA",
+    "category": "PERIBAHASA",
+    "question": "Lengkapi peribahasa: \"Sepandai-pandai tupai melompat, sekali waktu akan...?\"",
+    "answers": [
+      "jatuh",
+      "jatuh juga"
+    ],
+    "displayAnswer": "Jatuh Juga",
+    "hint": "Tiada kejahatan yang tidak terbongkar",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 401,
+    "subject": "FISIKA",
+    "category": "SATUAN SI",
+    "question": "Apakah satuan internasional (SI) untuk besaran GAYA?",
+    "answers": [
+      "newton",
+      "n"
+    ],
+    "displayAnswer": "Newton (N)",
+    "hint": "Diambil dari nama ilmuwan penemu gravitasi",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 402,
+    "subject": "FISIKA",
+    "category": "SATUAN SI",
+    "question": "Apakah satuan internasional (SI) untuk besaran ARUS LISTRIK?",
+    "answers": [
+      "ampere",
+      "a"
+    ],
+    "displayAnswer": "Ampere (A)",
+    "hint": "Berawalan huruf A",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 403,
+    "subject": "FISIKA",
+    "category": "MEKANIKA",
+    "question": "Energi yang dimiliki oleh suatu benda karena gerakannya disebut energi...?",
+    "answers": [
+      "kinetik"
+    ],
+    "displayAnswer": "Energi Kinetik",
+    "hint": "Rumus: 1/2 m v²",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 404,
+    "subject": "FISIKA",
+    "category": "MEKANIKA",
+    "question": "Energi yang dimiliki oleh suatu benda karena kedudukan atau ketinggiannya disebut energi...?",
+    "answers": [
+      "potensial"
+    ],
+    "displayAnswer": "Energi Potensial",
+    "hint": "Rumus: m x g x h",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 405,
+    "subject": "FISIKA",
+    "category": "OPTIKA",
+    "question": "Cermin jenis apakah yang digunakan pada kaca spion kendaraan bermotor?",
+    "answers": [
+      "cembung",
+      "cermin cembung"
+    ],
+    "displayAnswer": "Cermin Cembung",
+    "hint": "Menghasilkan bayangan maya, tegak, dan diperkecil dengan jangkauan luas",
+    "difficulty": "Sedang",
+    "points": 15
+  },
+  {
+    "id": 406,
+    "subject": "FISIKA",
+    "category": "ALAT UKUR",
+    "question": "Alat yang digunakan untuk mengukur kuat arus listrik adalah...?",
+    "answers": [
+      "amperemeter",
+      "ampere meter"
+    ],
+    "displayAnswer": "Amperemeter",
+    "hint": "Berasal dari kata Ampere + Meter",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 407,
+    "subject": "FISIKA",
+    "category": "BUNYI",
+    "question": "Bunyi yang memiliki frekuensi di atas 20.000 Hz dan tidak dapat didengar manusia disebut bunyi...?",
+    "answers": [
+      "ultrasonik",
+      "ultrasound"
+    ],
+    "displayAnswer": "Ultrasonik",
+    "hint": "Bisa didengar oleh kelelawar dan lumba-lumba",
+    "difficulty": "Sedang",
+    "points": 15
+  },
+  {
+    "id": 408,
+    "subject": "FISIKA",
+    "category": "TERMODINAMIKA",
+    "question": "Alat yang digunakan untuk mengukur suhu suatu benda atau ruangan disebut...?",
+    "answers": [
+      "termometer",
+      "thermometer"
+    ],
+    "displayAnswer": "Termometer",
+    "hint": "Berisi raksa atau alkohol",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 409,
+    "subject": "FISIKA",
+    "category": "TOKOH",
+    "question": "Penemu lampu pijar listrik yang terkenal adalah Thomas Alva...?",
+    "answers": [
+      "edison",
+      "thomas edison"
+    ],
+    "displayAnswer": "Thomas Alva Edison",
+    "hint": "Punya ribuan paten penemuan",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 410,
+    "subject": "FISIKA",
+    "category": "SATUAN SI",
+    "question": "Apakah satuan internasional (SI) untuk besaran FREKUENSI gelombang?",
+    "answers": [
+      "hertz",
+      "hz"
+    ],
+    "displayAnswer": "Hertz (Hz)",
+    "hint": "Disingkat Hz",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 501,
+    "subject": "PJOK",
+    "category": "SEPAKBOLA",
+    "question": "Berapakah jumlah pemain inti dalam satu tim sepak bola di lapangan?",
+    "answers": [
+      "11",
+      "sebelas"
+    ],
+    "displayAnswer": "11 Pemain",
+    "hint": "Makanya disebut kesebelasan",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 502,
+    "subject": "PJOK",
+    "category": "ORGANISASI",
+    "question": "Induk organisasi sepak bola seluruh Indonesia disingkat...?",
+    "answers": [
+      "pssi"
+    ],
+    "displayAnswer": "PSSI",
+    "hint": "Persatuan Sepak Bola Seluruh Indonesia",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 503,
+    "subject": "PJOK",
+    "category": "ORGANISASI",
+    "question": "Induk organisasi bulutangkis seluruh Indonesia disingkat...?",
+    "answers": [
+      "pbsi"
+    ],
+    "displayAnswer": "PBSI",
+    "hint": "Persatuan Bulu Tangkis Seluruh Indonesia",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 504,
+    "subject": "PJOK",
+    "category": "BELA DIRI",
+    "question": "Seni bela diri tradisional asli warisan leluhur bangsa Indonesia adalah...?",
+    "answers": [
+      "pencak silat",
+      "silat"
+    ],
+    "displayAnswer": "Pencak Silat",
+    "hint": "Diakui UNESCO sebagai warisan budaya takbenda",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 505,
+    "subject": "PJOK",
+    "category": "BOLA BASKET",
+    "question": "Berapakah jumlah pemain inti dalam satu tim bola basket di lapangan?",
+    "answers": [
+      "5",
+      "lima"
+    ],
+    "displayAnswer": "5 Pemain",
+    "hint": "Jumlah jari pada satu tangan",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 506,
+    "subject": "PJOK",
+    "category": "BOLA VOLI",
+    "question": "Berapakah jumlah pemain inti dalam satu tim bola voli di lapangan?",
+    "answers": [
+      "6",
+      "enam"
+    ],
+    "displayAnswer": "6 Pemain",
+    "hint": "Satu lebih banyak dari basket",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 507,
+    "subject": "PJOK",
+    "category": "BULUTANGKIS",
+    "question": "Pukulan keras menukik ke bawah pada permainan bulutangkis untuk mematikan lawan disebut...?",
+    "answers": [
+      "smash",
+      "smes"
+    ],
+    "displayAnswer": "Smash",
+    "hint": "Pukulan serangan utama",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 508,
+    "subject": "PJOK",
+    "category": "ATLETIK",
+    "question": "Lari cepat jarak pendek dalam cabang olahraga atletik disebut lari...?",
+    "answers": [
+      "sprint"
+    ],
+    "displayAnswer": "Sprint",
+    "hint": "Pelarinya disebut sprinter",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 509,
+    "subject": "PJOK",
+    "category": "RENANG",
+    "question": "Gaya renang yang gerakannya menyerupai gerakan katak berenang disebut gaya...?",
+    "answers": [
+      "dada",
+      "gaya dada",
+      "katak"
+    ],
+    "displayAnswer": "Gaya Dada (Katak)",
+    "hint": "Gaya renang paling santai dan populer",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 510,
+    "subject": "PJOK",
+    "category": "ORGANISASI",
+    "question": "Induk federasi sepak bola dunia disingkat...?",
+    "answers": [
+      "fifa"
+    ],
+    "displayAnswer": "FIFA",
+    "hint": "Federation Internationale de Football Association",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 511,
+    "subject": "PJOK",
+    "category": "SEPAKBOLA",
+    "question": "Posisi pemain sepak bola yang bertugas khusus menjaga gawang disebut...?",
+    "answers": [
+      "kiper",
+      "penjaga gawang",
+      "goalkeeper"
+    ],
+    "displayAnswer": "Kiper / Goalkeeper",
+    "hint": "Satu-satunya pemain yang boleh memegang bola dengan tangan",
+    "difficulty": "Mudah",
+    "points": 10
+  },
+  {
+    "id": 512,
+    "subject": "PJOK",
+    "category": "TINJU",
+    "question": "Arena panggung persegi empat tempat atlet bertanding tinju disebut...?",
+    "answers": [
+      "ring",
+      "ring tinju"
+    ],
+    "displayAnswer": "Ring Tinju",
+    "hint": "Meskipun namanya ring, bentuknya segi empat bertali",
+    "difficulty": "Mudah",
+    "points": 10
+  }
+]

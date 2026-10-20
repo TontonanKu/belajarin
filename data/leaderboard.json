@@ -1,0 +1,74 @@
+{
+  "budi_geografi": {
+    "uniqueId": "budi_geografi",
+    "nickname": "BUDI GEOGRAFI",
+    "avatar": "https://api.dicebear.com/7.x/bottts/svg?seed=budi_geografi",
+    "score": 62,
+    "combo": 3,
+    "correctCount": 3,
+    "lastCorrectTime": 1792486214139
+  },
+  "sultan_tiktok": {
+    "uniqueId": "sultan_tiktok",
+    "nickname": "Sultan TikTok",
+    "avatar": "https://api.dicebear.com/7.x/bottts/svg?seed=sultan",
+    "score": 2425,
+    "combo": 0,
+    "correctCount": 0,
+    "lastCorrectTime": 0
+  },
+  "siti_sejarah": {
+    "uniqueId": "siti_sejarah",
+    "nickname": "SITI SEJARAH",
+    "avatar": "https://api.dicebear.com/7.x/bottts/svg?seed=siti_sejarah",
+    "score": 78,
+    "combo": 4,
+    "correctCount": 4,
+    "lastCorrectTime": 1792486218098
+  },
+  "andi_budaya": {
+    "uniqueId": "andi_budaya",
+    "nickname": "ANDI BUDAYA",
+    "avatar": "https://api.dicebear.com/7.x/bottts/svg?seed=andi_budaya",
+    "score": 103,
+    "combo": 5,
+    "correctCount": 5,
+    "lastCorrectTime": 1792488330921
+  },
+  "mega_ips": {
+    "uniqueId": "mega_ips",
+    "nickname": "MEGA IPS",
+    "avatar": "https://api.dicebear.com/7.x/bottts/svg?seed=mega_ips",
+    "score": 47,
+    "combo": 3,
+    "correctCount": 3,
+    "lastCorrectTime": 1792486214703
+  },
+  "fajar_juara": {
+    "uniqueId": "fajar_juara",
+    "nickname": "FAJAR JUARA",
+    "avatar": "https://api.dicebear.com/7.x/bottts/svg?seed=fajar_juara",
+    "score": 42,
+    "combo": 3,
+    "correctCount": 3,
+    "lastCorrectTime": 1792486213708
+  },
+  "sultan_penantang_793": {
+    "uniqueId": "sultan_penantang_793",
+    "nickname": "🔥 Sultan Penantang Baru",
+    "avatar": "https://api.dicebear.com/7.x/bottts/svg?seed=sultan_penantang_793",
+    "score": 37500,
+    "combo": 0,
+    "correctCount": 0,
+    "lastCorrectTime": 0
+  },
+  "sultan_bos_dermawan": {
+    "uniqueId": "sultan_bos_dermawan",
+    "nickname": "👑 Sultan Bos Dermawan",
+    "avatar": "https://api.dicebear.com/7.x/bottts/svg?seed=sultan_bos_dermawan",
+    "score": 5000,
+    "combo": 0,
+    "correctCount": 0,
+    "lastCorrectTime": 0
+  }
+}

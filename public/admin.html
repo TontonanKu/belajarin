@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KUIS IPS - Panel Streamer & Simulator Uji Coba</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Kalam:wght@400;700&family=Plus+Jakarta+Sans:wght@500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <script src="/socket.io/socket.io.js"></script>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <div class="admin-wrapper">
+    <!-- Top Nav Styled as Notebook Header -->
+    <header class="admin-navbar">
+      <div class="brand">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+          </svg>
+        </div>
+        <div class="brand-info">
+          <h1>PANEL KONTROL STREAMER IPS</h1>
+          <p>Catatan Belajar • Pengatur Soal & Test Simulator Offline</p>
+        </div>
+      </div>
+      <div class="nav-links">
+        <button id="btnAdminTestSound" class="btn-sub-link" title="Uji coba efek suara chime">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px;">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+          <span>Tes Suara Kuis</span>
+        </button>
+        <button id="btnLockAdmin" class="btn-sub-link" style="color: #dc2626; border-color: #fca5a5; font-weight: 700;" title="Kunci panel kontrol sekarang">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px;">
+            <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <span>Kunci Panel</span>
+        </button>
+        <a href="/" target="_blank" class="btn-sub-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px;">
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          <span>Beranda Kuis</span>
+        </a>
+        <a href="/overlay.html" target="_blank" class="btn-obs-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px;">
+            <rect width="20" height="15" x="2" y="3" rx="2"></rect>
+            <polyline points="17 2 12 7 7 2"></polyline>
+          </svg>
+          <span>Buka Overlay 9:16 (OBS) ➔</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="dashboard-grid">
+      <!-- Section 1: TikTok Live Connection -->
+      <section class="card section-connection">
+        <div class="card-tape-accent"></div>
+        <div class="card-header">
+          <span class="card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"></path>
+              <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"></path>
+              <circle cx="12" cy="12" r="2"></circle>
+              <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"></path>
+              <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"></path>
+            </svg>
+          </span>
+          <h2>KONEKSI TIKTOK LIVE</h2>
+          <span class="status-pill disconnected" id="connStatusPill">TERPUTUS</span>
+        </div>
+        <div class="card-body">
+          <p class="section-desc">Ketikkan username TikTok kamu untuk membaca chat & gift penonton (tanpa perlu token/password):</p>
+          <div class="input-action-row">
+            <div class="input-with-prefix">
+              <span class="prefix">@</span>
+              <input type="text" id="tiktokUsernameInput" placeholder="username_kamu" spellcheck="false">
+            </div>
+            <button id="btnConnectTikTok" class="btn btn-primary">Hubungkan Live</button>
+            <button id="btnDisconnectTikTok" class="btn btn-outline" style="display:none;">Putuskan</button>
+          </div>
+          <div id="connErrorMessage" class="error-banner hidden"></div>
+          <div class="helper-box">
+            💡 <b>Tips Pelajaran:</b> Akun kamu harus dalam keadaan <b>sedang LIVE</b> saat tombol Hubungkan diklik. Jika belum live, gunakan <b>Simulator</b> di bawah untuk mencoba animasi dan suara kuis!
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Active Question Inspector -->
+      <section class="card section-active-question">
+        <div class="card-tape-accent yellow"></div>
+        <div class="card-header">
+          <span class="card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <circle cx="12" cy="12" r="6"></circle>
+              <circle cx="12" cy="12" r="2"></circle>
+            </svg>
+          </span>
+          <h2>SOAL YANG SEDANG AKTIF</h2>
+          <span class="cat-pill" id="activeCategoryPill">GEOGRAFI</span>
+        </div>
+        <div class="card-body">
+          <div class="question-preview-box">
+            <div class="q-meta-row">
+              <span class="meta-tag">Nomor: #<b id="activeQIndex">1</b></span>
+              <span class="meta-tag">Poin: <b id="activeQPoints">15</b></span>
+              <span class="meta-tag">Sisa Waktu: <b id="activeQTime">20s</b></span>
+            </div>
+            <div class="q-main-text" id="activeQText">Memuat soal...</div>
+            <div class="q-answer-box">
+              <span class="ans-label">Kunci Jawaban Resmi:</span>
+              <span class="ans-val" id="activeQAnswer">-</span>
+            </div>
+            <div class="q-variations-box">
+              <span class="var-label">Variasi teks diterima:</span>
+              <code id="activeQVariations">[]</code>
+            </div>
+            <div class="q-hint-box">
+              <span class="hint-label">Petunjuk Soal:</span>
+              <span id="activeQHint">-</span>
+            </div>
+          </div>
+          <div class="action-buttons-grid">
+            <button id="btnNextQuestion" class="btn btn-success">⏭️ Soal Berikutnya</button>
+            <button id="btnTogglePause" class="btn btn-warning">⏸️ Jeda Waktu</button>
+            <button id="btnRevealHint" class="btn btn-secondary">💡 Buka Petunjuk Sekarang</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Test Simulator (Play without TikTok Live!) -->
+      <section class="card section-simulator">
+        <div class="card-tape-accent pink"></div>
+        <div class="card-header">
+          <span class="card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 2v7.31"></path>
+              <path d="M14 9.3V1.99"></path>
+              <path d="M8.5 2h7"></path>
+              <path d="M14 9.3a6.5 6.5 0 1 1-4 0"></path>
+              <path d="M5.52 16h12.96"></path>
+            </svg>
+          </span>
+          <h2>SIMULATOR UJI COBA (OFFLINE OK)</h2>
+          <span class="mode-pill">UJI COBA</span>
+        </div>
+        <div class="card-body">
+          <p class="section-desc">Uji coba tampilan animasi pop-up juara, audio suara, tebakan chat, dan klasemen tanpa perlu live di TikTok:</p>
+          
+          <div class="quick-sim-buttons">
+            <button id="btnSimFollow" class="btn btn-glow-blue" style="background: #e0e7ff; color: #3730a3; border-color: #6366f1;">
+              <span>👤 Follower Baru (+Suara TTS)</span>
+            </button>
+            <button id="btnSimHattrick" class="btn btn-glow-rose" style="background: #ffedd5; color: #9a3412; border-color: #f97316;">
+              <span>🔥 Hattrick 3x Tercepat (+Voice)</span>
+            </button>
+            <button id="btnSimGift" class="btn btn-glow-rose">
+              <span>🌹 1 Mawar (1 🪙 = +20s Live)</span>
+            </button>
+            <button id="btnSimGiftDonut" class="btn btn-glow-rose" style="background: #fde047; color: #713f12;">
+              <span>🍩 1 Donut (30 🪙 = +600s Live)</span>
+            </button>
+            <button id="btnSimSultanGift" class="btn btn-glow-rose" style="background: #fef08a; color: #854d0e; border-color: #ca8a04;">
+              <span>👑 Sultan +100 🪙 (+2000s)</span>
+            </button>
+            <button id="btnSimOvertake" class="btn btn-glow-rose" style="background: #fed7aa; color: #9a3412; border-color: #ea580c;">
+              <span>🚨 Balap Takhta (+1500 🪙)</span>
+            </button>
+            <button id="btnSimLike" class="btn btn-glow-blue">
+              <span>❤️ Kirim 10 Likes</span>
+            </button>
+          </div>
+
+          <!-- TTS Voice Audio Testing Center -->
+          <div class="voice-test-box" style="margin-top: 14px; background: #e0f2fe; border: 1.5px solid #0284c7; border-radius: 8px; padding: 10px 12px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <span style="font-size: 12px; font-weight: 800; color: #0369a1;">🎙️ UJI COBA SUARA TTS BAHASA INDONESIA:</span>
+              <span style="font-size: 10px; font-weight: 700; color: #0284c7; background: #ffffff; padding: 2px 6px; border-radius: 4px; border: 1px solid #7dd3fc;">Web Speech API</span>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px;">
+              <button id="btnTestVoiceFollow" class="btn btn-primary" style="font-size: 11px; padding: 6px 10px; background: #0284c7;">
+                🔊 Tes Suara Sambut Follower
+              </button>
+              <button id="btnTestVoice5s" class="btn btn-warning" style="font-size: 11px; padding: 6px 10px; background: #f59e0b; color: #ffffff;">
+                ⏳ Tes Suara Sisa 5 Detik
+              </button>
+              <button id="btnTestVoiceHattrick" class="btn btn-glow-rose" style="font-size: 11px; padding: 6px 10px; background: #ea580c; color: #ffffff;">
+                🔥 Tes Suara Hattrick 3x
+              </button>
+              <button id="btnTestVoiceRace" class="btn btn-success" style="font-size: 11px; padding: 6px 10px; background: #16a34a; color: #ffffff;">
+                🐊 Tes Suara Balap Buaya
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Game Settings & Rules -->
+      <section class="card section-settings">
+        <div class="card-tape-accent"></div>
+        <div class="card-header">
+          <span class="card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+          </span>
+          <h2>PENGATURAN KELAS & KUIS</h2>
+        </div>
+        <div class="card-body">
+          <!-- 15-Minute Subject Manager -->
+          <div class="setting-item" style="background: #f1f5f9; padding: 10px; border-radius: 8px; border: 1.5px solid #0f172a;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <label for="subjectSelect" style="font-weight: 800; color: #0f172a;">📚 Mata Pelajaran Aktif:</label>
+              <span style="font-size: 11px; font-weight: 800; color: #0369a1;">⏳ Ganti dalam: <b id="adminSubjectCountdown">15:00</b></span>
+            </div>
+            <div style="display: flex; gap: 8px;">
+              <select id="subjectSelect" class="custom-select" style="flex: 1;">
+                <option value="IPS">🌍 IPS (Ilmu Pengetahuan Sosial)</option>
+                <option value="IPA">🔬 IPA (Ilmu Pengetahuan Alam)</option>
+                <option value="MTK">📐 MTK (Matematika & Hitung Cepat)</option>
+                <option value="BAHASA INDONESIA">📖 Bahasa Indonesia & Sastra</option>
+                <option value="FISIKA">⚡ Fisika & Teknologi</option>
+                <option value="PJOK">⚽ PJOK (Olahraga & Jasmani)</option>
+              </select>
+              <button id="btnNextSubject" class="btn btn-primary" title="Langsung ganti ke mata pelajaran berikutnya dengan jeda scene juara kelas">⏭️ Ganti Mapel (+Jeda)</button>
+            </div>
+            <div style="font-size: 11px; color: #64748b; margin-top: 5px;">
+              💡 <i>Otomatis berganti mapel setiap 15 menit (900 detik). Setiap 3 mapel selesai otomatis memicu sesi Balap Buaya!</i>
+            </div>
+          </div>
+
+          <!-- Intermission Scene Controller & Crocodile Derby -->
+          <div class="setting-item" style="background: #fefce8; padding: 10px; border-radius: 8px; border: 1.5px solid #ca8a04;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <label style="font-weight: 800; color: #713f12;">🔔 Scene Jeda & Balap Buaya:</label>
+              <span id="adminIntermissionBadge" class="status-pill disconnected" style="font-size: 10px;">KUIS AKTIF</span>
+            </div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <button id="btnTriggerIntermission" class="btn btn-warning" style="flex: 1;" title="Mulai jeda istirahat 15 detik untuk pergantian mapel & menampilkan juara kelas">
+                🔔 Mulai Scene Jeda (15s)
+              </button>
+              <button id="btnTriggerRace" class="btn btn-primary" style="background: #15803d; border-color: #166534; color: #ffffff; font-weight: 800;" title="Mulai Mini-Game Balap Buaya Sungai (Crocodile River Derby)">
+                🐊 Balap Buaya (Derby)
+              </button>
+              <button id="btnEndIntermission" class="btn btn-primary" title="Akhiri jeda lebih cepat dan langsung mulai mapel baru">
+                ⏩ Masuk Kelas Baru
+              </button>
+            </div>
+            <div style="margin-top: 6px; display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-size: 11px; color: #854d0e;">Sisa Waktu Jeda: <b id="adminIntermissionTimer">-</b></span>
+              <button id="btnSaveDailyChampions" class="btn btn-secondary" style="font-size: 10px; padding: 2px 8px;">💾 Simpan ke Juara Hari Ini</button>
+            </div>
+          </div>
+
+          <div class="setting-item">
+            <label for="categoryFilter">Kategori Pelajaran:</label>
+            <select id="categoryFilter" class="custom-select">
+              <option value="ALL">🌟 Semua Mata Pelajaran IPS (Acak)</option>
+              <option value="GEOGRAFI">🌍 Geografi Indonesia & Dunia</option>
+              <option value="SEJARAH">📜 Sejarah Nusantara & Tokoh Bangsa</option>
+              <option value="BUDAYA">🎭 Seni & Budaya Tradisional</option>
+              <option value="EKONOMI & SOSIAL">⚖️ Sosiologi & Ekonomi</option>
+            </select>
+          </div>
+
+          <div class="setting-item">
+            <label for="timerDurationSelect">Durasi Ujian / Soal:</label>
+            <select id="timerDurationSelect" class="custom-select">
+              <option value="15">15 Detik (Hitung Cepat)</option>
+              <option value="20" selected>20 Detik (Standar Belajar)</option>
+              <option value="25">25 Detik (Sedang)</option>
+              <option value="30">30 Detik (Santai)</option>
+            </select>
+          </div>
+
+          <!-- PIN Security Settings -->
+          <div class="setting-item" style="background: #f8fafc; padding: 10px; border-radius: 8px; border: 1.5px solid #cbd5e1;">
+            <label style="font-weight: 800; color: #0f172a; margin-bottom: 6px; display: block;">🔐 Ganti PIN Streamer / Guru:</label>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <input type="password" id="inputOldPin" placeholder="PIN Lama" class="custom-select" style="flex: 1; min-width: 110px; padding: 6px 10px;">
+              <input type="password" id="inputNewPin" placeholder="PIN Baru" class="custom-select" style="flex: 1; min-width: 110px; padding: 6px 10px;">
+              <button id="btnChangePin" class="btn btn-secondary" style="font-size: 11px;">Simpan PIN</button>
+            </div>
+            <div id="pinChangeFeedback" style="font-size: 11px; margin-top: 4px; display: none;"></div>
+          </div>
+
+          <div class="danger-zone">
+            <button id="btnResetLeaderboard" class="btn btn-danger">🗑️ Reset Klasemen Poin Siswa (Sultan Tetap Abadi)</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Top Sultan Spender (Permanen) & Juara Kelas Roster -->
+      <section class="card section-sultan-champions" style="grid-column: 1 / -1;">
+        <div class="card-tape-accent yellow"></div>
+        <div class="card-header">
+          <span class="card-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14"></path>
+            </svg>
+          </span>
+          <h2>TOP SULTAN SPENDER (PERMANEN) & JUARA KELAS HARIAN</h2>
+          <span class="mode-pill" style="background: #fde047; color: #713f12;">HALL OF FAME</span>
+        </div>
+        <div class="card-body">
+          <p class="section-desc">
+            <b>Dewan Sultan</b> bersifat abadi & tidak pernah di-reset (hanya berganti jika koinnya dibalap penonton lain). <b>Juara Kelas</b> menyimpan Top 5 setiap harinya (Senin s/d Minggu):
+          </p>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px;">
+            <div class="admin-preview-col" style="background: #fdf6e2; padding: 12px; border-radius: 8px; border: 1.5px solid #d97706;">
+              <h3 style="font-size: 13px; margin-bottom: 8px; color: #78350f;">👑 Top Sultan Spender (Abadi):</h3>
+              <div id="adminSultanList" style="display: flex; flex-direction: column; gap: 6px;">
+                <div style="font-size: 11px; color: #92400e;">Memuat data sultan...</div>
+              </div>
+            </div>
+            <div class="admin-preview-col" style="background: #f0f9ff; padding: 12px; border-radius: 8px; border: 1.5px solid #0284c7;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <h3 style="font-size: 13px; color: #0369a1;">🏆 Juara Kelas Hari Ini (<span id="adminTodayName">Selasa</span>):</h3>
+              </div>
+              <div id="adminDailyChampionsList" style="display: flex; flex-direction: column; gap: 6px;">
+                <div style="font-size: 11px; color: #0284c7;">Memuat data juara kelas...</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- OBS Setup Guide -->
+    <footer class="obs-guide-card">
+      <div class="guide-title">
+        <span>🎬 CARA PASANG DI OBS STUDIO / TIKTOK LIVE STUDIO:</span>
+      </div>
+      <ol class="guide-steps">
+        <li>Buka software streaming (OBS Studio atau TikTok Live Studio).</li>
+        <li>Pada panel <b>Sources</b>, klik tanda <b>+</b> dan pilih <b>Browser</b> (Peramban).</li>
+        <li>Masukkan URL: <code>http://localhost:3050/overlay.html</code></li>
+        <li>Atur Resolusi ke <b>1080</b> x <b>1920</b> (format vertikal 9:16 untuk Live TikTok).</li>
+        <li>Centang opsi <i>"Shutdown source when not visible"</i> lalu klik <b>OK</b>.</li>
+      </ol>
+    </footer>
+    <!-- Live Winner Toast Notification -->
+    <div id="adminToast" class="admin-toast hidden">
+      <span class="toast-icon">🎉</span>
+      <div class="toast-body">
+        <b id="toastUser">@pemenang</b>
+        <span id="toastMsg">Menjawab Benar! (+XX Poin)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Streamer PIN Security Modal -->
+  <div id="adminAuthModal" class="admin-auth-overlay">
+    <div class="auth-card">
+      <button id="btnCloseAuthModal" class="auth-close-btn" title="Tutup & Kembali ke Beranda" type="button">✕</button>
+      <div class="auth-tape"></div>
+      <div class="auth-icon-wrap">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+        </svg>
+      </div>
+      <h2>AREA STREAMER / GURU</h2>
+      <p>Panel kontrol ini dilindungi sandi untuk menjaga keamanan siaran kuis. Masukkan PIN untuk membuka akses:</p>
+      <form id="authPinForm" class="auth-form" onsubmit="return false;">
+        <div class="auth-input-group">
+          <input type="password" id="authPinInput" placeholder="Ketik PIN..." autocomplete="current-password" autofocus>
+          <button type="submit" id="btnSubmitPin" class="btn btn-primary">Buka Panel ➔</button>
+        </div>
+        <div id="authErrorMessage" class="auth-error-msg hidden">PIN Salah! Akses ditolak.</div>
+        <div class="auth-hint" style="color: #64748b; font-size: 11px; margin-top: 6px;">
+          🔒 <i>Akses terbatas khusus pemilik siaran kuis.</i>
+        </div>
+        <a href="/" class="auth-back-link">← Kembali ke Beranda Kuis</a>
+      </form>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
