@@ -19,8 +19,12 @@ const QUESTIONS_FILE = path.join(__dirname, 'questions.json');
 const TOP_SPENDERS_FILE = path.join(DATA_DIR, 'top_spenders.json');
 const DAILY_CHAMPIONS_FILE = path.join(DATA_DIR, 'daily_champions.json');
 
-if (!fs.existsSync(DATA_DIR)) {
-  fs.mkdirSync(DATA_DIR, { recursive: true });
+try {
+  if (!fs.existsSync(DATA_DIR)) {
+    fs.mkdirSync(DATA_DIR, { recursive: true });
+  }
+} catch (e) {
+  console.warn('Could not initialize DATA_DIR:', e.message);
 }
 
 // Load Questions
@@ -840,79 +844,81 @@ function broadcastState() {
   });
 }
 
-// 1-Second Game Loop & 15-Minute Subject Rotation Timer
-setInterval(() => {
-  // Jika sedang sesi Balap Buaya, jeda timer soal kuis
-  if (gameState.isRaceActive) return;
+// 1-Second Game Loop & 15-Minute Subject Rotation Timer (Only in local streaming mode)
+if (!process.env.VERCEL) {
+  setInterval(() => {
+    // Jika sedang sesi Balap Buaya, jeda timer soal kuis
+    if (gameState.isRaceActive) return;
 
-  // 1. Intermission Tick (Jeda Pergantian Mata Pelajaran - 15 detik)
-  if (gameState.isIntermission) {
-    if (gameState.intermissionTimeLeft > 0) {
-      gameState.intermissionTimeLeft--;
-      io.emit('event:intermissionTick', {
-        timeLeft: gameState.intermissionTimeLeft,
-        duration: gameState.intermissionDuration,
-        nextSubject: gameState.upcomingSubject
+    // 1. Intermission Tick (Jeda Pergantian Mata Pelajaran - 15 detik)
+    if (gameState.isIntermission) {
+      if (gameState.intermissionTimeLeft > 0) {
+        gameState.intermissionTimeLeft--;
+        io.emit('event:intermissionTick', {
+          timeLeft: gameState.intermissionTimeLeft,
+          duration: gameState.intermissionDuration,
+          nextSubject: gameState.upcomingSubject
+        });
+      } else {
+        endIntermission();
+      }
+      return;
+    }
+
+    if (gameState.isPaused || !gameState.currentQuestion) return;
+
+    // 2. 15-Minute Subject Schedule Countdown (900 detik)
+    if (gameState.subjectTimeLeft > 0) {
+      gameState.subjectTimeLeft--;
+    } else {
+      // 15 Menit telah selesai!
+      gameState.completedSubjectsCount++;
+      console.log(`[Jadwal Mapel] 15 Menit selesai. Total mapel selesai: ${gameState.completedSubjectsCount}`);
+
+      // Setiap 3 mapel selesai -> Masuk ke Sesi Balapan Buaya!
+      if (gameState.completedSubjectsCount % 3 === 0) {
+        startCrocodileRace();
+      } else {
+        startIntermission(15);
+      }
+      return;
+    }
+
+    // 3. Question Timer Countdown
+    if (gameState.timeLeft > 0) {
+      gameState.timeLeft--;
+
+      // Auto reveal hint halfway through
+      if (gameState.timeLeft <= Math.floor(gameState.timerDuration / 2) && !gameState.hintVisible) {
+        gameState.hintVisible = true;
+        io.emit('game:hintRevealed', { hint: gameState.currentQuestion.hint });
+      }
+
+      io.emit('game:tick', {
+        timeLeft: gameState.timeLeft,
+        subjectTimeLeft: gameState.subjectTimeLeft,
+        activeUserCount: gameState.activeUsers.size
       });
     } else {
-      endIntermission();
+      // Time's up for current question
+      io.emit('game:timeUp', {
+        correctAnswer: gameState.currentQuestion.displayAnswer,
+        roundWinnersCount: gameState.roundWinners.length
+      });
+
+      // Reset boss round if active
+      if (gameState.isBossRound) {
+        gameState.isBossRound = false;
+        gameState.bossMultiplier = 1;
+      }
+
+      // Wait 3.5 seconds for display then switch question
+      setTimeout(() => {
+        nextQuestion();
+      }, 3500);
     }
-    return;
-  }
-
-  if (gameState.isPaused || !gameState.currentQuestion) return;
-
-  // 2. 15-Minute Subject Schedule Countdown (900 detik)
-  if (gameState.subjectTimeLeft > 0) {
-    gameState.subjectTimeLeft--;
-  } else {
-    // 15 Menit telah selesai!
-    gameState.completedSubjectsCount++;
-    console.log(`[Jadwal Mapel] 15 Menit selesai. Total mapel selesai: ${gameState.completedSubjectsCount}`);
-
-    // Setiap 3 mapel selesai -> Masuk ke Sesi Balapan Buaya!
-    if (gameState.completedSubjectsCount % 3 === 0) {
-      startCrocodileRace();
-    } else {
-      startIntermission(15);
-    }
-    return;
-  }
-
-  // 3. Question Timer Countdown
-  if (gameState.timeLeft > 0) {
-    gameState.timeLeft--;
-
-    // Auto reveal hint halfway through
-    if (gameState.timeLeft <= Math.floor(gameState.timerDuration / 2) && !gameState.hintVisible) {
-      gameState.hintVisible = true;
-      io.emit('game:hintRevealed', { hint: gameState.currentQuestion.hint });
-    }
-
-    io.emit('game:tick', {
-      timeLeft: gameState.timeLeft,
-      subjectTimeLeft: gameState.subjectTimeLeft,
-      activeUserCount: gameState.activeUsers.size
-    });
-  } else {
-    // Time's up for current question
-    io.emit('game:timeUp', {
-      correctAnswer: gameState.currentQuestion.displayAnswer,
-      roundWinnersCount: gameState.roundWinners.length
-    });
-
-    // Reset boss round if active
-    if (gameState.isBossRound) {
-      gameState.isBossRound = false;
-      gameState.bossMultiplier = 1;
-    }
-
-    // Wait 3.5 seconds for display then switch question
-    setTimeout(() => {
-      nextQuestion();
-    }, 3500);
-  }
-}, 1000);
+  }, 1000);
+}
 
 // Express Routes & Static Assets
 app.use(cors());
@@ -1256,8 +1262,10 @@ io.on('connection', socket => {
   });
 });
 
-// Start initial question
-nextQuestion();
+// Start initial question (Only in local streaming mode)
+if (!process.env.VERCEL) {
+  nextQuestion();
+}
 
 function startServer(port) {
   server.listen(port, () => {
@@ -1277,4 +1285,8 @@ function startServer(port) {
   });
 }
 
-startServer(DEFAULT_PORT);
+module.exports = app;
+
+if (!process.env.VERCEL && require.main === module) {
+  startServer(DEFAULT_PORT);
+}
