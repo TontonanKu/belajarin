@@ -49,16 +49,22 @@ module.exports = (req, res) => {
   let topSpenders = defaultSpenders;
 
   try {
-    const loadedChamps = require('../data/daily_champions.json');
-    if (loadedChamps && typeof loadedChamps === 'object') {
-      dailyChampions = loadedChamps;
+    const fs = require('fs');
+    const path = require('path');
+    const dailyPath = path.join(process.cwd(), 'data', 'daily_champions.json');
+    if (fs.existsSync(dailyPath)) {
+      dailyChampions = JSON.parse(fs.readFileSync(dailyPath, 'utf8'));
     }
   } catch (e) {}
 
   try {
-    const loadedSpenders = require('../data/top_spenders.json');
-    if (Array.isArray(loadedSpenders)) {
-      topSpenders = loadedSpenders;
+    const fs = require('fs');
+    const path = require('path');
+    const spendersPath = path.join(process.cwd(), 'data', 'top_spenders.json');
+    if (fs.existsSync(spendersPath)) {
+      const sp = JSON.parse(fs.readFileSync(spendersPath, 'utf8'));
+      if (Array.isArray(sp)) topSpenders = sp;
+      else if (typeof sp === 'object') topSpenders = Object.values(sp);
     }
   } catch (e) {}
 
