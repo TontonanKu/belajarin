@@ -102,12 +102,169 @@ body {
   z-index: 1;
 }
 
-/* When viewed on high-res OBS (1080x1920) */
+/* When viewed on high-res OBS & TikTok LIVE Studio (1080x1920) */
 @media (min-width: 800px) and (min-height: 1200px) {
   .overlay-container {
     max-width: 100%;
-    padding: 24px 22px 14px 26px;
+    padding: 24px 22px 20px 26px;
+    gap: 16px;
+  }
+
+  /* Header sizing for 1080p */
+  .subject-schedule-strip {
+    padding: 8px 14px;
+    border-radius: 10px;
+    border-width: 2px;
+  }
+  .subj-badge {
+    font-size: 14px;
+    gap: 6px;
+  }
+  .subj-timer-pill {
+    font-size: 13px;
+    padding: 2px 8px;
+  }
+  .coin-boost-pill {
+    padding: 4px 12px;
+    border-radius: 8px;
+  }
+  .coin-text {
+    font-size: 13px;
+  }
+  .top-sultan-strip-pill {
+    font-size: 13px;
+    padding: 3px 10px;
+  }
+
+  .main-title {
+    font-size: 28px;
+    letter-spacing: -0.5px;
+  }
+  .doodle-sub {
+    font-size: 15px;
+  }
+  .category-badge, .difficulty-badge, .boss-indicator {
+    font-size: 13px;
+    padding: 3px 10px;
+  }
+
+  /* Timer for 1080p */
+  .timer-radial-wrap {
+    width: 76px;
+    height: 76px;
+  }
+  .timer-number {
+    font-size: 30px;
+  }
+  .timer-sec-label {
+    font-size: 10px;
+  }
+
+  /* Sub Status Cards */
+  .target-gift-card, .stream-metrics-card {
+    padding: 10px 14px;
+    border-radius: 12px;
+  }
+  .gift-label {
+    font-size: 13px;
+  }
+  .gift-progress-count {
+    font-size: 15px;
+  }
+  .progress-bar-bg {
+    height: 8px;
+  }
+  .metric-val {
+    font-size: 18px;
+  }
+  .metric-lbl {
+    font-size: 11px;
+  }
+
+  /* Hero Question Card - The Star of the Stream */
+  .question-card {
+    border-width: 3px;
+    border-radius: 20px;
+    padding: 24px 26px;
+    box-shadow: 6px 6px 0px var(--ink-primary);
+    gap: 16px;
+  }
+  .q-number-pill, .q-points-pill {
+    font-size: 16px;
+    padding: 4px 14px;
+    border-radius: 8px;
+  }
+  .prop-stamp {
+    font-size: 20px;
+  }
+  .prop-label {
+    font-size: 13px;
+  }
+  .q-body {
+    min-height: 200px;
+    padding: 24px 20px;
+    border-radius: 14px;
+  }
+  .q-text {
+    font-size: 32px;
+    line-height: 1.45;
+  }
+
+  /* Hint & CTA */
+  .hint-container {
+    padding: 12px 18px;
+    border-radius: 12px;
+  }
+  .hint-container.visible {
+    max-height: 90px;
+  }
+  .hint-header {
+    font-size: 16px;
+  }
+  .hint-text {
+    font-size: 18px;
+  }
+
+  .cta-input-banner {
+    padding: 12px 18px;
+    border-radius: 12px;
+  }
+  .cta-icon-box {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+  .cta-lead {
+    font-size: 17px;
+  }
+  .cta-sub {
+    font-size: 13px;
+  }
+
+  /* Compact Bottom Split Section for 1080x1920 */
+  .bottom-split-section {
+    height: 380px !important;
+    max-height: 380px !important;
     gap: 14px;
+  }
+  .split-col {
+    border-width: 2.5px;
+    border-radius: 16px;
+    padding: 12px 14px;
+    box-shadow: 4px 4px 0px var(--ink-primary);
+  }
+  .col-title {
+    font-size: 15px;
+  }
+  .col-badge {
+    font-size: 11px;
+    padding: 2px 8px;
+  }
+  .chat-item-text, .lb-name, .lb-score {
+    font-size: 14px;
+  }
+  .chat-item-user {
+    font-size: 13px;
   }
 }
 
@@ -614,6 +771,8 @@ body {
   flex-direction: column;
   position: relative;
   z-index: 5;
+  flex: 1;
+  min-height: 0;
 }
 
 .question-card {
@@ -626,6 +785,9 @@ body {
   flex-direction: column;
   gap: 10px;
   position: relative;
+  flex: 1;
+  min-height: 0;
+  justify-content: space-between;
 }
 
 /* Card washi tapes on corners */
@@ -689,12 +851,13 @@ body {
 }
 
 .q-body {
-  min-height: 60px;
+  flex: 1;
+  min-height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 4px 8px;
+  padding: 8px 12px;
   background: #fafaf9;
   border: 1.5px dashed #cbd5e1;
   border-radius: 8px;
@@ -1024,8 +1187,9 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-  flex: 1;
-  min-height: 0;
+  height: 280px;
+  max-height: 280px;
+  flex-shrink: 0;
   position: relative;
   z-index: 5;
 }
