@@ -30,3 +30,11 @@ module.exports = (req, res) => {
     tiktokUser: isExpired ? '' : liveStatus.tiktokUser
   });
 };
+
+module.exports.getLiveStatus = () => {
+  const isExpired = Date.now() - liveStatus.updatedAt > 120000;
+  return {
+    isLive: isExpired ? false : liveStatus.isLive,
+    tiktokUser: isExpired ? '' : liveStatus.tiktokUser
+  };
+};

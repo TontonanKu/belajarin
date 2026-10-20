@@ -62,9 +62,17 @@ module.exports = (req, res) => {
     }
   } catch (e) {}
 
+  let currentLive = { isLive: false, tiktokUser: '' };
+  try {
+    const streamStatusMod = require('./stream-status');
+    if (streamStatusMod && typeof streamStatusMod.getLiveStatus === 'function') {
+      currentLive = streamStatusMod.getLiveStatus();
+    }
+  } catch (e) {}
+
   return res.status(200).json({
-    isLive: false,
-    tiktokUser: '',
+    isLive: currentLive.isLive,
+    tiktokUser: currentLive.tiktokUser,
     currentSubject: {
       key: 'IPS',
       name: 'ILMU PENGETAHUAN SOSIAL',

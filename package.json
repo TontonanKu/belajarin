@@ -4,8 +4,8 @@
   "description": "",
   "scripts": {
     "build": "echo Static build complete",
-    "start": "node server.js",
-    "dev": "node server.js",
+    "start": "node stream-server.js",
+    "dev": "node stream-server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

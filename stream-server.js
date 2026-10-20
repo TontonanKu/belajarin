@@ -268,6 +268,24 @@ const gameState = {
 // TikTok Live Connection
 let tiktokLiveConnection = null;
 
+function syncLiveStatusToCloud(isLive, tiktokUser) {
+  try {
+    const postData = JSON.stringify({ isLive: !!isLive, tiktokUser: tiktokUser || '' });
+    const https = require('https');
+    const req = https.request('https://kuis.zura-w.my.id/api/stream-status', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Content-Length': Buffer.byteLength(postData)
+      },
+      timeout: 3000
+    });
+    req.on('error', () => {});
+    req.write(postData);
+    req.end();
+  } catch (e) {}
+}
+
 function connectTikTok(username) {
   if (!username) return;
   username = username.replace(/^@/, '').trim();
@@ -293,6 +311,7 @@ function connectTikTok(username) {
       console.log(`[TikTok] Connected to room ID: ${state.roomId}`);
       gameState.tiktokStatus = 'CONNECTED';
       gameState.tiktokError = null;
+      syncLiveStatusToCloud(true, username);
       broadcastState();
     }).catch(err => {
       console.error('[TikTok] Connection error:', err);
@@ -372,6 +391,7 @@ function disconnectTikTok() {
     tiktokLiveConnection = null;
   }
   gameState.tiktokStatus = 'DISCONNECTED';
+  syncLiveStatusToCloud(false, '');
   broadcastState();
 }
 

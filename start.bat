@@ -9,5 +9,5 @@ echo - Dashboard Admin & Simulator: http://localhost:3050/admin.html
 echo - Overlay Stream (OBS Studio): http://localhost:3050/overlay.html
 echo.
 start http://localhost:3050
-node server.js
+node stream-server.js
 pause
