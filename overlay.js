@@ -430,19 +430,16 @@ socket.on('game:newGuess', data => {
   }
 });
 
-// 9. Gift Added Time Event (1 Koin = +20s Menambah Waktu Live!)
+// 9. Gift Added Points Event (1 Koin = +100 Poin Pemain!)
 socket.on('event:giftAddedTime', data => {
   playFanfare();
   triggerConfetti(1.5);
   
-  // PERBAIKAN BUG: Waktu koin menambah waktu live/mapel, bukan waktu soal
-  if (data.newSubjectTimeLeft !== undefined) {
-    updateSubjectTimer(data.newSubjectTimeLeft);
-  }
   updateTargetGift(data.targetGift);
 
   if (bonusTimeToast) {
-    bonusTimeToast.textContent = `+${data.bonusSeconds}s WAKTU LIVE! (${data.coins} 🪙)`;
+    const pts = data.giftPoints || (data.coins * 100);
+    bonusTimeToast.textContent = `+${pts} POIN! (${data.coins} 🪙)`;
     bonusTimeToast.classList.remove('hidden');
     setTimeout(() => {
       bonusTimeToast.classList.add('hidden');
@@ -566,6 +563,34 @@ function updateSubjectDisplay(subj, timeLeft) {
   if (container) {
     container.classList.remove('theme-ips', 'theme-ipa', 'theme-mtk', 'theme-bahasa', 'theme-fisika', 'theme-pjok');
     if (subj.themeClass) container.classList.add(subj.themeClass);
+  }
+
+  // Dynamic Corner Props based on Subject (Matching TikTok Live Quiz Reference)
+  const cpTL = document.getElementById('cornerPropTL');
+  const cpTR = document.getElementById('cornerPropTR');
+  const cpBL = document.getElementById('cornerPropBL');
+  const cpBR = document.getElementById('cornerPropBR');
+  if (subj.key === 'MTK') {
+    if (cpTL) cpTL.textContent = 'π';
+    if (cpTR) cpTR.textContent = '√x';
+    if (cpBL) cpBL.textContent = 'Σ';
+    if (cpBR) cpBR.textContent = '÷';
+  } else if (subj.key === 'IPA') {
+    if (cpTL) cpTL.textContent = '🔬';
+    if (cpTR) cpTR.textContent = '🧪';
+    if (cpBL) cpBL.textContent = '🧬';
+    if (cpBR) cpBR.textContent = '⚛️';
+  } else if (subj.key === 'BAHASA') {
+    if (cpTL) cpTL.textContent = '📖';
+    if (cpTR) cpTR.textContent = '✍️';
+    if (cpBL) cpBL.textContent = '📚';
+    if (cpBR) cpBR.textContent = '🗣️';
+  } else {
+    // Default IPS
+    if (cpTL) cpTL.textContent = '🌍';
+    if (cpTR) cpTR.textContent = '📜';
+    if (cpBL) cpBL.textContent = '🏛️';
+    if (cpBR) cpBR.textContent = '🗺️';
   }
 
   // Dynamic Corner Mascot Prop

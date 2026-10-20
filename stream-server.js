@@ -704,13 +704,9 @@ function handleUserGuess(user) {
 }
 
 function handleUserGift(gift) {
-  // Hitung koin: 1 Koin/Diamond = +20 DETIK!
+  // Hitung koin: 1 Koin/Diamond = +100 POIN untuk pemain! (Sesuai permintaan: Gift tidak menambah waktu live lagi)
   const coins = Math.max(1, (gift.diamondCount || 1) * (gift.repeatCount || 1));
-  const bonusSeconds = coins * 20;
-
-  // PERBAIKAN BUG: Tambahkan bonus detik ke WAKTU MAPEL / LIVE (menunda end live),
-  // BUKAN ke waktu soal kuis individual (gameState.timeLeft)!
-  gameState.subjectTimeLeft += bonusSeconds;
+  const giftPoints = coins * 100;
 
   // Add to target gift
   gameState.targetGift.current += coins;
@@ -768,7 +764,7 @@ function handleUserGift(gift) {
     }
   }
   
-  // Award score to gifter in session leaderboard
+  // Award score to gifter in session leaderboard: 1 Koin = +100 POIN!
   if (!leaderboard[gift.uniqueId]) {
     leaderboard[gift.uniqueId] = {
       uniqueId: gift.uniqueId,
@@ -780,7 +776,6 @@ function handleUserGift(gift) {
       lastCorrectTime: 0
     };
   }
-  const giftPoints = coins * 25;
   leaderboard[gift.uniqueId].score += giftPoints;
   saveLeaderboard();
 
@@ -798,9 +793,10 @@ function handleUserGift(gift) {
     avatar: gift.avatar,
     giftName: gift.giftName || 'Mawar',
     coins,
-    bonusSeconds,
+    giftPoints,
+    bonusSeconds: 0,
     newTimeLeft: gameState.timeLeft,
-    newSubjectTimeLeft: gameState.subjectTimeLeft, // Sisa waktu live bertambah!
+    newSubjectTimeLeft: gameState.subjectTimeLeft,
     targetGift: gameState.targetGift,
     isBossRound: gameState.isBossRound,
     triggeredBoss,
