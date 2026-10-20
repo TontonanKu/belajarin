@@ -565,6 +565,22 @@ function updateSubjectDisplay(subj, timeLeft) {
     if (subj.themeClass) container.classList.add(subj.themeClass);
   }
 
+  // Update Horizontal Subject Tabs (PJOK, BAHASA, MTK, IPA, IPS)
+  document.querySelectorAll('.subject-tab-item').forEach(tab => {
+    tab.classList.remove('active');
+    const existingArrow = tab.querySelector('.tab-arrow');
+    if (existingArrow) existingArrow.remove();
+  });
+  const currentKey = subj.key || 'IPS';
+  const targetTab = document.getElementById(`tab-${currentKey}`);
+  if (targetTab) {
+    targetTab.classList.add('active');
+    const arrow = document.createElement('div');
+    arrow.className = 'tab-arrow';
+    arrow.textContent = '▼';
+    targetTab.appendChild(arrow);
+  }
+
   // Dynamic Corner Props based on Subject (Matching TikTok Live Quiz Reference)
   const cpTL = document.getElementById('cornerPropTL');
   const cpTR = document.getElementById('cornerPropTR');
