@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KUIS IPS LIVE TIKTOK - Catatan Belajar 9:16 Overlay</title>
+  <!-- Google Fonts: Space Grotesk, Kalam, Caveat, Silkscreen, Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Kalam:wght@400;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Silkscreen:wght@700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <!-- Socket.IO -->
+  <script src="/socket.io/socket.io.js"></script>
+  <link rel="stylesheet" href="overlay.css">
+</head>
+<body>
+  <!-- Canvas for floating particles / hearts / confetti -->
+  <canvas id="particlesCanvas"></canvas>
+
+  <!-- Master 9:16 Vertical Notebook Stream Overlay -->
+  <div class="overlay-container">
+    
+    <!-- Audio Unlock Banner (Notice to unlock browser audio) -->
+    <div id="audioUnlockBanner" class="audio-unlock-banner">
+      <span>🔔 <b>Klik di sini</b> untuk mengaktifkan Suara Kuis!</span>
+    </div>
+
+    <!-- Top Notebook Binder Header -->
+    <header class="stream-header">
+      <!-- 1-Hour Subject Schedule & Coin Boost Strip -->
+      <div class="subject-schedule-strip">
+        <div class="subj-schedule-left">
+          <span class="subj-badge" id="subjBadge">
+            <span id="subjIcon">🌍</span> <b id="subjName">MAPEL: IPS</b>
+          </span>
+          <span class="subj-timer-pill" title="Sisa waktu mapel sebelum berganti otomatis (1 jam)">
+            ⏳ <span id="subjTimeLeft">59:59</span>
+          </span>
+        </div>
+        <!-- Top Sultan Mini Pill (Abadi / Tidak Pernah Reset) -->
+        <div class="top-sultan-strip-pill" id="topSultanStripPill" title="Top Sultan Gifters (Abadi - Ga Pernah Reset)">
+          <span class="sultan-crown">👑</span>
+          <span class="sultan-label">SULTAN #1:</span>
+          <span class="sultan-name" id="stripSultanName">@raja_sawer</span>
+          <span class="sultan-coins" id="stripSultanCoins">1,250 🪙</span>
+        </div>
+        <div class="coin-boost-pill">
+          <span class="coin-spin">🪙</span>
+          <span class="coin-text">1 KOIN = +20s WAKTU LIVE!</span>
+        </div>
+      </div>
+
+      <div class="header-notebook-bar">
+        <!-- Washi tape at top left -->
+        <div class="washi-tape-strip top-left-tape"></div>
+
+        <div class="header-brand">
+          <div class="live-stamp">
+            <span class="live-dot"></span>
+            <span class="live-text">LIVE</span>
+          </div>
+          <div class="title-group">
+            <div class="doodle-sub" id="doodleSubjectSub">kelas belajar live interaktif ✏️</div>
+            <h1 class="main-title" id="subjectMainTitle">ILMU PENGETAHUAN SOSIAL</h1>
+            <div class="subtitle-row">
+              <span class="category-badge" id="categoryBadge">
+                <span class="cat-icon" id="catIcon">🌍</span>
+                <span id="categoryName">GEOGRAFI</span>
+              </span>
+              <span class="difficulty-badge" id="diffBadge">SEDANG</span>
+              <span class="boss-indicator hidden" id="bossBadge">🔥 2X POIN GANDA!</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Exam Stopwatch / Radial Timer -->
+        <div class="timer-radial-wrap">
+          <svg class="radial-svg" viewBox="0 0 100 100">
+            <circle class="radial-bg" cx="50" cy="50" r="42"></circle>
+            <circle class="radial-progress" id="radialProgress" cx="50" cy="50" r="42"></circle>
+          </svg>
+          <div class="timer-center-text">
+            <span class="timer-number" id="timerNumber">25</span>
+            <span class="timer-sec-label">DETIK</span>
+          </div>
+          <!-- Floating Coin Time Added Toast -->
+          <div class="bonus-time-toast hidden" id="bonusTimeToast">+20s!</div>
+        </div>
+      </div>
+
+      <!-- Sticky Notes Row: Target Gift & Hype Counter -->
+      <div class="sub-status-bar">
+        <!-- Target Gift Sticker Card -->
+        <div class="target-gift-card">
+          <div class="gift-info-row">
+            <div class="gift-name-group">
+              <span class="gift-emoji">🌹</span>
+              <span class="gift-label">TARGET: <b id="giftTargetName">Mawar</b></span>
+            </div>
+            <div class="gift-progress-count">
+              <span id="giftCurrent">0</span>/<span id="giftTargetMax">50</span>
+            </div>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="giftProgressFill" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <!-- Hype & Metric Card -->
+        <div class="stream-metrics-card">
+          <div class="metric-item">
+            <span class="metric-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </span>
+            <div class="metric-col">
+              <span class="metric-val" id="activeViewersCount">0</span>
+              <span class="metric-lbl">Penjawab Aktif</span>
+            </div>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 11l3 3L22 4"></path>
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+              </svg>
+            </span>
+            <div class="metric-col">
+              <span class="metric-val" id="totalSolvedCount">0</span>
+              <span class="metric-lbl">Soal Selesai</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Follower Greeting Banner (Disambut Suara TTS & Popup Elegan) -->
+    <div id="followerGreetingBanner" class="follower-greeting-banner hidden">
+      <div class="fgb-tape"></div>
+      <div class="fgb-avatar-wrap">
+        <img id="fgbAvatar" src="" class="fgb-avatar" alt="Follower" onerror="this.src='https://api.dicebear.com/7.x/bottts/svg?seed=user'">
+        <span class="fgb-badge">BARU</span>
+      </div>
+      <div class="fgb-text">
+        <div class="fgb-title">👋 TERIMA KASIH SUDAH MEM-FOLLOW!</div>
+        <div class="fgb-name" id="fgbName">@username</div>
+        <div class="fgb-sub">Selamat datang & bergabung di kuis live kita! ✏️</div>
+      </div>
+    </div>
+
+    <!-- Center Question Paper Sheet -->
+    <main class="question-section">
+      <div class="question-card" id="questionCard">
+        <!-- Washi Tape on Question Card Corners -->
+        <div class="card-washi-tape tape-card-left"></div>
+        <div class="card-washi-tape tape-card-right"></div>
+
+        <div class="q-header-row">
+          <div class="q-number-pill">
+            <span>SOAL #<b id="questionNumber">1</b></span>
+          </div>
+          <!-- Dynamic Subject Themed Prop (Tidak menutupi poin kuis) -->
+          <div class="subject-corner-prop" id="subjectCornerProp" title="Elemen Khas Mata Pelajaran Aktif">
+            <span class="prop-stamp" id="propStampEmoji">🌍</span>
+            <span class="prop-label" id="propStampLabel">BOLA DUNIA</span>
+          </div>
+          <div class="q-points-pill">
+            <span>+<b id="questionPoints">15</b> POIN</span>
+          </div>
+        </div>
+
+        <!-- Question Body Text -->
+        <div class="q-body">
+          <div class="q-text" id="questionText">Memuat pertanyaan kuis...</div>
+        </div>
+
+        <!-- Hint Post-It Sticky Note -->
+        <div class="hint-container" id="hintBox">
+          <div class="hint-tape"></div>
+          <div class="hint-header">
+            <span class="hint-icon">💡</span>
+            <span class="hint-label">CATATAN PETUNJUK:</span>
+          </div>
+          <div class="hint-text" id="hintText">Menunggu petunjuk...</div>
+        </div>
+
+        <!-- Action Callout Bar -->
+        <div class="cta-input-banner">
+          <div class="cta-icon-box">✍️</div>
+          <div class="cta-text-group">
+            <div class="cta-lead">KETIK JAWABAN DI CHAT LIVE!</div>
+            <div class="cta-sub">Jawaban paling cepat mendapat poin tertinggi & kombo streak</div>
+          </div>
+          <div class="typing-dots">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <!-- Answer Reveal Overlay (when round ends) -->
+        <div class="answer-reveal-banner hidden" id="answerRevealBanner">
+          <div class="reveal-badge">KUNCI JAWABAN RESMI</div>
+          <div class="reveal-answer" id="revealedAnswerText">-</div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Winner Celebration Notification (Polaroid Style) -->
+    <section class="winner-banner-wrapper">
+      <div class="winner-banner hidden" id="winnerBanner">
+        <div class="winner-washi-tape"></div>
+        <div class="winner-avatar-wrap">
+          <img id="winnerAvatar" src="" alt="Avatar" class="winner-avatar">
+          <span class="winner-crown">👑</span>
+        </div>
+        <div class="winner-info">
+          <div class="winner-top-row">
+            <span class="winner-tag" id="winnerOrderTag">TERCEPAT #1</span>
+            <span class="winner-combo-badge" id="winnerCombo">🔥 1x COMBO</span>
+          </div>
+          <div class="winner-name-row">
+            <span class="winner-name" id="winnerName">@username</span>
+            <span class="winner-status">BENAR! 🎯</span>
+          </div>
+        </div>
+        <div class="winner-points-box">
+          <span class="pts-plus">+</span>
+          <span class="pts-val" id="winnerPoints">25</span>
+          <span class="pts-lbl">POIN</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top Spender Overtake Toast / Alert Banner (Dibalap!) -->
+    <div id="overtakeToast" class="overtake-toast hidden">
+      <div class="overtake-washi-tape"></div>
+      <div class="overtake-badge">🚨 BALAP TAKHTA SULTAN! 🚨</div>
+      <div class="overtake-content">
+        <img id="overtakeAvatar" src="" class="overtake-avatar" alt="Sultan" onerror="this.src='https://api.dicebear.com/7.x/bottts/svg?seed=sultan'">
+        <div class="overtake-details">
+          <div class="overtake-user"><b id="overtakeName">@username</b></div>
+          <div class="overtake-sub">Naik ke <span class="overtake-rank" id="overtakeRank">Rank #1</span> Top Spender (<span id="overtakeCoins">1,500</span> 🪙)!</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hattrick 3x Tercepat Streak Appreciation Banner -->
+    <div id="hattrickBanner" class="hattrick-banner hidden">
+      <div class="hattrick-washi-tape"></div>
+      <div class="hattrick-badge-top">⚡ APRESIASI HATTRICK JUARA ⚡</div>
+      <div class="hattrick-inner">
+        <div class="hattrick-flame">🔥</div>
+        <div class="hattrick-details">
+          <div class="hattrick-title">TERCEPAT 3X BERTURUT-TURUT!</div>
+          <div class="hattrick-user-row">
+            <img id="hattrickAvatar" src="" class="hattrick-avatar" alt="Juara" onerror="this.src='https://api.dicebear.com/7.x/bottts/svg?seed=winner'">
+            <span class="hattrick-name" id="hattrickName">@username</span>
+          </div>
+          <div class="hattrick-sub">Pikiran super kilat! Juara kelas sejati hari ini 🎓</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1-Hour Subject Rotation Announcement Banner -->
+    <div id="subjectChangeModal" class="subject-change-modal hidden">
+      <div class="modal-washi-tape"></div>
+      <span class="modal-bell">🔔</span>
+      <div class="modal-text">
+        <div class="modal-lead">PERGANTIAN MATA PELAJARAN (1 JAM)</div>
+        <div class="modal-subj-name" id="announcementSubject">MATEMATIKA</div>
+        <div class="modal-sub">Siapkan jawabanmu di kolom komentar live! ✍️</div>
+      </div>
+    </div>
+
+    <!-- Bottom Split Section (Folder Notebook Theme) -->
+    <section class="bottom-split-section">
+      <!-- Left Column: Live Chat Guesses (Student Answer Sheet) -->
+      <div class="split-col chat-stream-card">
+        <div class="col-header">
+          <div class="col-title-group">
+            <span class="col-icon">💬</span>
+            <span class="col-title">TEBAKAN CHAT</span>
+          </div>
+          <div class="col-badge live-blink">LIVE</div>
+        </div>
+        <div class="chat-feed-container" id="chatFeed">
+          <div class="chat-empty-state">Menunggu komentar penonton...</div>
+        </div>
+      </div>
+
+      <!-- Right Column: Top 10 Class Leaderboard (Peringkat Siswa) -->
+      <div class="split-col leaderboard-card">
+        <div class="col-header">
+          <div class="col-title-group">
+            <span class="col-icon">🏆</span>
+            <span class="col-title">TOP 10 PERINGKAT</span>
+          </div>
+          <div class="col-badge gold">SKOR</div>
+        </div>
+        <div class="leaderboard-container" id="leaderboardList">
+          <div class="rank-empty-state">Belum ada skor</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Master Scene: Jeda Istirahat & Juara Kelas Harian + Dewan Sultan -->
+    <div id="intermissionScene" class="intermission-scene hidden">
+      <!-- Tape Accents -->
+      <div class="intermission-tape-top"></div>
+      
+      <!-- Intermission Top Header -->
+      <div class="intermission-header">
+        <div class="intermission-bell-box">
+          <span class="intermission-bell">🔔</span>
+        </div>
+        <div class="intermission-titles">
+          <div class="intermission-eyebrow">LONCENG ISTIRAHAT KELAS • PERGANTIAN MATA PELAJARAN</div>
+          <h2 class="intermission-main-title">PENGUMUMAN JUARA KELAS & TOP SULTAN</h2>
+          <div class="intermission-next-subj-strip">
+            <span class="next-lbl">KELAS BERIKUTNYA:</span>
+            <span class="next-badge" id="intermissionNextBadge">
+              <span id="intermissionNextIcon">🔬</span>
+              <b id="intermissionNextName">IPA (ILMU PENGETAHUAN ALAM)</b>
+            </span>
+          </div>
+        </div>
+        <div class="intermission-timer-card">
+          <span class="itc-label">MASUK KELAS:</span>
+          <span class="itc-number" id="intermissionCountdown">30s</span>
+        </div>
+      </div>
+
+      <!-- Main Dual Boards Grid -->
+      <div class="intermission-grid">
+        
+        <!-- Board 1: Juara Kelas Harian (Top 5 Siswa per Hari) -->
+        <div class="intermission-board daily-champions-board">
+          <div class="board-header">
+            <div class="board-title-group">
+              <span class="board-emoji">🏆</span>
+              <div>
+                <h3 class="board-h3">JUARA KELAS HARIAN</h3>
+                <span class="board-desc">Top 5 Murid Berprestasi (Senin s/d Minggu)</span>
+              </div>
+            </div>
+            <span class="board-tag gold">REKAP MINGGUAN</span>
+          </div>
+
+          <!-- Day Tabs Selector: Senin s/d Minggu -->
+          <div class="day-tabs-row" id="dayTabsRow">
+            <button class="day-tab-btn" data-day="Senin">Senin</button>
+            <button class="day-tab-btn active" data-day="Selasa">Selasa ⭐</button>
+            <button class="day-tab-btn" data-day="Rabu">Rabu</button>
+            <button class="day-tab-btn" data-day="Kamis">Kamis</button>
+            <button class="day-tab-btn" data-day="Jumat">Jumat</button>
+            <button class="day-tab-btn" data-day="Sabtu">Sabtu</button>
+            <button class="day-tab-btn" data-day="Minggu">Minggu</button>
+          </div>
+
+          <!-- Top 5 Champions Roster for Active Day -->
+          <div class="daily-champions-roster" id="dailyChampionsRoster">
+            <!-- Dynamic 5 Champions Cards -->
+          </div>
+        </div>
+
+        <!-- Board 2: Papan Kehormatan Dewan Sultan (Top Spender Permanen) -->
+        <div class="intermission-board top-spenders-board">
+          <div class="board-header sultan-board-header">
+            <div class="board-title-group">
+              <span class="board-emoji">👑</span>
+              <div>
+                <h3 class="board-h3">PAPAN KEHORMATAN SULTAN</h3>
+                <span class="board-desc">Klasemen Abadi • Tidak Pernah Reset • Berubah Jika Dibalap</span>
+              </div>
+            </div>
+            <span class="board-tag sultan">PERMANEN</span>
+          </div>
+
+          <!-- Top 5 Sultan Spenders Roster -->
+          <div class="sultan-spenders-roster" id="sultanSpendersRoster">
+            <!-- Dynamic Sultan Cards -->
+          </div>
+
+          <!-- Bottom Notice -->
+          <div class="sultan-hint-banner">
+            <span class="shb-icon">🪙</span>
+            <span class="shb-text">Kirim Gift koin di TikTok Live untuk merebut takhta Sultan & menambah waktu kuis (+20s/koin)!</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Master Scene: Sesi Spesial Balapan Buaya Sungai (Crocodile River Derby) -->
+    <div id="crocodileRaceScene" class="crocodile-race-scene hidden">
+      <div class="race-tape-top"></div>
+      
+      <div class="race-header">
+        <div class="race-flag-icon">🐊</div>
+        <div class="race-titles">
+          <div class="race-eyebrow">SESI SPESIAL SETIAP 3 MATA PELAJARAN</div>
+          <h2 class="race-main-title">BALAPAN BUAYA SUNGAI 🏁</h2>
+          <div class="race-sub">Ketik <b>#1 s/d #5</b> di chat live untuk dukung buaya jagoanmu!</div>
+        </div>
+        <div class="race-countdown-card">
+          <span class="rcc-label">WAKTU BALAP:</span>
+          <span class="rcc-time" id="raceCountdown">16s</span>
+        </div>
+      </div>
+
+      <!-- River Track with 5 Water Lanes -->
+      <div class="river-track-container" id="riverTrackContainer">
+        <!-- 5 Crocodile Lanes -->
+      </div>
+
+      <!-- Winner Podium Celebration Modal (Appears when winning crocodile reaches finish) -->
+      <div id="raceWinnerModal" class="race-winner-modal hidden">
+        <div class="rwm-tape"></div>
+        <div class="rwm-trophy">🏆</div>
+        <div class="rwm-lead">JUARA 1 BALAPAN BUAYA!</div>
+        <div class="rwm-winner-name" id="raceWinnerName">🐊 Kroko Muara #1</div>
+        <div class="rwm-winner-tag" id="raceWinnerTag">Topi Pramuka 🏕️</div>
+        <div class="rwm-sub">Selamat kepada semua penonton pendukung sang juara!</div>
+        <div class="rwm-next-note">Mata pelajaran berikutnya segera dimulai dalam beberapa detik... 🔔</div>
+      </div>
+    </div>
+
+    <!-- Footer Status Tag & Sound Button -->
+    <footer class="overlay-footer">
+      <div class="tiktok-connection-tag" id="tiktokTag">
+        <span class="conn-dot" id="connDot"></span>
+        <span id="tiktokUserDisplay">TikTok: Tidak Terhubung</span>
+      </div>
+      <div class="footer-actions">
+        <button class="audio-toggle-btn" id="audioBtn" title="Suara On/Off">
+          <span id="audioIcon">
+            <svg class="modern-svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            </svg>
+          </span>
+        </button>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="overlay.js"></script>
+</body>
+</html>
