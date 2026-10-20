@@ -1,6 +1,3 @@
-const fs = require('fs');
-const path = require('path');
-
 let latestLiveStatus = {
   isLive: false,
   tiktokUser: '',
@@ -30,26 +27,24 @@ module.exports = (req, res) => {
   let topSpenders = [];
 
   try {
-    const dailyPath = path.join(process.cwd(), 'data', 'daily_champions.json');
-    if (fs.existsSync(dailyPath)) {
-      dailyChampions = JSON.parse(fs.readFileSync(dailyPath, 'utf8'));
-    }
-  } catch (e) {}
+    dailyChampions = require('../data/daily_champions.json');
+  } catch (e) {
+    dailyChampions = {};
+  }
 
   try {
-    const spendersPath = path.join(process.cwd(), 'data', 'top_spenders.json');
-    if (fs.existsSync(spendersPath)) {
-      topSpenders = JSON.parse(fs.readFileSync(spendersPath, 'utf8'));
-    }
-  } catch (e) {}
+    topSpenders = require('../data/top_spenders.json');
+  } catch (e) {
+    topSpenders = [];
+  }
 
   return res.status(200).json({
     isLive: latestLiveStatus.isLive,
     tiktokUser: latestLiveStatus.tiktokUser,
     currentSubject: latestLiveStatus.currentSubject,
     subjectTimeLeft: latestLiveStatus.subjectTimeLeft,
-    topSpenders: topSpenders.slice(0, 10),
-    dailyChampions: dailyChampions,
+    topSpenders: Array.isArray(topSpenders) ? topSpenders.slice(0, 10) : [],
+    dailyChampions: dailyChampions || {},
     todayDayName: todayDayName
   });
 };

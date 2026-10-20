@@ -1,13 +1,5 @@
 {
   "version": 2,
-  "cleanUrls": true,
-  "rewrites": [
-    { "source": "/api/public-hub", "destination": "/api/public-hub.js" },
-    { "source": "/api/suggestions", "destination": "/api/suggestions.js" },
-    { "source": "/api/stream-status", "destination": "/api/stream-status.js" },
-    { "source": "/", "destination": "/public/index.html" },
-    { "source": "/overlay.html", "destination": "/public/overlay.html" },
-    { "source": "/admin.html", "destination": "/public/admin.html" },
-    { "source": "/(.*)", "destination": "/public/$1" }
-  ]
+  "outputDirectory": "public",
+  "cleanUrls": true
 }
